@@ -1,0 +1,47 @@
+@mixin List1{
+   list-style: none;
+
+   li{
+      @include Rob-700;
+      font-size: 1.8rem;
+      line-height: 180%;
+      color: $black;
+
+      &:not(:last-child){
+         margin-bottom: 2rem;
+      }
+
+      &::before {
+         display: inline-block;
+         font-style: normal;
+         font-variant: normal;
+         text-rendering: auto;
+         font-family: "Font Awesome 5 Free";
+         font-weight: 900;
+         content: "\f00c";
+         font-size: 1.6rem;
+         color: $teal;
+         margin-right: 1rem;
+      }
+      
+   }
+
+   @media screen and (max-width: 600px){
+      li{
+         @include Rob-500;
+         font-size: 1.6rem;
+         line-height: 150%;
+   
+         &:not(:last-child){
+            margin-bottom: 1rem;
+         }
+   
+         &::before {
+            font-size: 1.2rem;
+            margin-right: 0.6rem;
+         }
+         
+      }
+   }
+}
+

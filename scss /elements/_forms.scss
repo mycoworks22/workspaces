@@ -1,0 +1,192 @@
+
+
+.input1 {
+   width: 100%;
+   margin: 0 auto;
+   padding: 1rem;
+   border: 1px solid $grey1;
+   border-radius: 5px;
+   background-color: $grey1;
+   outline: none;
+   color: $black;
+   @include Rob-400;
+   font-size: 1.6rem;
+   appearance: none; 
+
+   &:focus {
+       border: 1px solid $teal;
+   }
+
+   &[type=number]::-webkit-inner-spin-button{
+       -webkit-appearance: none; 
+       margin: 0; 
+   }
+
+   &input[type=number]::-webkit-outer-spin-button{
+       -webkit-appearance: none; 
+       margin: 0; 
+   }
+
+}
+
+.select2 {
+   cursor: pointer;
+   font-size: 1.6rem;
+   @include Rob-400;
+   color: $black;
+   line-height: 160%;
+
+   padding: 0.6em 1.4em 0.5em 0.8em;
+   width: 100%;
+
+   box-sizing: border-box;
+
+   border: 1px solid $grey1;
+   box-shadow: none;
+   border-radius: 5px;
+   outline: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+   appearance: none;
+
+   background-color: $grey1;
+   background-image: url("../img/angle-down-solid.svg"),
+                   linear-gradient(to bottom, $grey1 100%, $grey1 100%);
+   background-repeat: no-repeat, repeat;
+   background-position: right 0.7em top 50%, 0 0;
+   background-size: 1.2rem auto, 100%;
+
+   &:focus {
+       border: 1px solid $teal;
+   }
+}
+
+.option2{
+   font-size: 1.6rem;
+   @include Rob-400;
+   line-height: 160%;
+}
+
+.checkbox1 {
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+
+   input {
+       margin-right: 1rem;
+       font-size: 5rem;
+       height: 2rem;
+       width: 2rem;
+   }
+
+   label {
+       color: $black;
+       @include Rob-400;
+       font-size: 2rem;
+   }
+
+   a {
+       @include Rob-500;
+       font-size: 2rem;
+       color: $teal;
+       transition: all 1s ease;
+
+       &:hover {
+           color: $dBlue;
+           text-decoration: none;
+       }
+   }
+}
+
+.checkbox2{
+   //display: block;
+   color: $black;
+   @include Rob-500;
+   font-size: 1.8rem;
+
+   position: relative; 
+   padding-left: 0.8rem;
+
+   cursor: pointer !important;
+
+   .checkmark {  
+       position: absolute;
+       top: 0;
+       left: 0;
+       height: 1.9rem;
+       width: 1.9rem;
+
+       background-color: white;
+       border: 2px solid $teal;
+       border-radius: 3px;
+   }
+
+   input{
+       opacity: 0 !important;
+       cursor: pointer !important;
+
+       &:checked ~ .checkmark{
+           background-color: $teal !important;
+
+           &::after{
+               content: "\f00c";
+               font-family: "FontAwesome";
+               font-weight: 300;
+               font-size: 1.3rem;
+               position: absolute;
+               top: 1px;
+               left: 1px;
+               color: $white;
+           }
+       }
+   }
+}
+
+.submit1 {
+   display: block;
+   padding: 1rem 1rem;
+   width: fit-content;
+
+   @include Rob-700;
+   font-size: 1.4rem;
+   color: $white;
+
+   border-radius: 0.4rem;
+   border: 2px solid $teal;
+   background-color: $teal;
+
+   transition: all 1s ease;
+
+   &:hover {
+      background-color: transparent;
+      color: $teal;
+      border: 2px solid $teal;
+      cursor: pointer;
+   }
+
+   
+}
+
+.submit2{
+   @include Flex1;
+   @include basicBtn1;
+}
+
+.textarea1 {
+   width: 100%;
+   height: 15rem;
+   padding: 1rem;
+   border: 1px solid $grey1;
+   border-radius: 5px;
+   background-color: $grey1;
+   outline: none;
+   color: $black;
+   @include Rob-400;
+   font-size: 1.6rem;
+   resize: none;
+   overflow: auto;
+
+   &:focus {
+       border: 1px solid $teal;
+   }
+}

@@ -1,0 +1,54 @@
+.video{
+   
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+
+   &__vid{
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      cursor: pointer;
+   }
+
+   &__controls{
+      display: none;
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 5;
+
+      &:hover{
+         .fa-pause{
+            visibility: visible;
+         }
+      }
+
+      i{
+         font-size: 5rem;
+         color: $teal;
+         cursor: pointer;
+         background-color: $white; opacity: 0.8;
+         border-radius: 50px;
+         transition: visibility 0.5s ease-in-out;
+      }
+      .fa-play{               
+         @include Radiate;
+         padding: 2rem 2.1rem 2.1rem 3rem;
+      }
+
+      .fa-pause{
+         visibility: hidden;
+         padding: 2.1rem 2.5rem 2.1rem 2.5rem;
+      }
+
+      .hide-playPause{
+         display: none;
+      }
+
+      .show-playPause{
+         display: block;
+      }
+   }
+}

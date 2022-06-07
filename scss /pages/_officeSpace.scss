@@ -1,0 +1,140 @@
+.officeSpaceWrap{
+   margin: 6rem 0;
+}
+
+.officeSpaceSliderWrap{
+   padding: 6rem 0;
+   background-color: $grey1;
+}
+
+.officeSpaceInfoWrap{
+   margin-bottom: 6rem;
+   padding-bottom: 6rem;
+   background-color: $grey1;
+
+   .officeSpace{
+      display: grid;
+      grid-template-columns: 1fr max-content;
+      grid-column-gap: 6rem;
+      align-items: center;
+   }
+
+   .officeSpaceAmenities{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: max-content max-content max-content;
+      grid-row-gap: 2rem;
+
+      &__text{
+         grid-column: 1 / span 3;
+         @include P1;
+         margin-bottom: 2rem;
+      }
+
+      &__amenity{
+         @include Flex1;
+         justify-content: flex-start;
+
+         img{
+            display: block;
+            width: 24px;
+            margin-right: 1.5rem;
+         }
+
+         p{
+            @include P1;
+         }
+
+         &--2{
+            img{
+               width: 18px;
+            }
+         }
+      }
+   }
+
+   .officeSpacePrice{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 4rem;
+      border-left: 1px solid #C4C4C4;
+
+      &__p{
+         @include P1;
+         line-height: 100%;
+         font-size: 2rem;
+      }
+
+      &__price{
+         @include Rub-500;
+         font-size: 6rem;
+         line-height: 160%;
+         color: $teal;
+
+         span{
+            @include Rub-400;
+            font-size: 4rem;
+            line-height: 180%;
+            color: $teal;
+         }
+      }
+
+      &__a{
+         margin-top: 4rem;
+         @include basicBtn1;
+         padding: 2rem;
+         @include Rub-400;
+      }
+   }
+}
+
+@media screen and (max-width: 1100px){
+   .officeSpaceInfoWrap{
+      .officeSpaceAmenities{
+         grid-template-columns: 1fr 1fr 1fr;
+         &__text{
+            margin-bottom: 0;
+         }
+         &__amenity{
+            flex-direction: column;
+            justify-content: space-between  !important;
+            img{
+               margin-right: 0;
+            }
+
+            p{
+               text-align: center;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 969px){
+   .officeSpaceInfoWrap{
+      .officeSpaceAmenities{
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: max-content max-content max-content max-content;
+
+         &__text{
+            grid-column: 1 / span 2;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 720px){
+   .officeSpaceInfoWrap{
+      .officeSpace{
+         grid-template-columns: 1fr;
+         grid-template-rows: max-content max-content;
+         grid-row-gap: 3rem;
+      }
+
+      .officeSpacePrice{
+         padding: 0 5%;
+         border-left: none;
+      }
+   }
+}

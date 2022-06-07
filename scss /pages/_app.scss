@@ -1,0 +1,192 @@
+.mycoAppWrap{
+   padding: 6rem 0;
+
+   &__h1{
+      @include  H3;
+   } 
+
+
+   .mycoApp{
+      display: grid;
+      grid-template-columns: 4fr 3fr;
+      grid-column-gap: 1rem;
+
+      .mycoAppText{
+         &__h{
+            @include H4;
+         }
+   
+         &__p{
+            @include Rob-400;
+            font-size: 1.6rem;
+            line-height: 201%;
+            color: $black;
+            margin-bottom: 2rem;
+         }
+
+         ul{
+            list-style: none;
+
+            li{
+               @include Rob-400;
+               font-size: 1.6rem;
+               line-height: 160%;
+               margin-bottom: 2rem;
+               color: $black;
+            }
+
+            i{
+               font-size: 1.4rem;
+               color: $teal;
+               margin-right: 0.5rem;
+            }
+         }
+      }
+
+      .mycoAppImg{
+         img{
+            display: block;
+            width: 100%;
+         }
+      }
+   }
+
+}
+
+
+.appsOurAppWrap{
+   position: relative;
+   background-color: $dBlue;
+   margin-top: 15rem;
+   margin-bottom: 6rem;
+
+   &::before{
+      position: absolute;
+      bottom: 100%;
+      content: '';
+      
+      border-style: solid;
+      border-width: 20rem 0 0 100vw;
+      border-color: transparent transparent transparent $dBlue; 
+   }
+
+   .appsOurApp{
+      padding: 2rem 0 5rem 0;
+      display: grid;
+      grid-template-columns: 3fr 4fr;
+      grid-column-gap: 1rem;
+      align-items: center;
+
+      .appsOurAppImg{
+   
+         img{
+            display: block;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+         }
+      }
+      
+      .appsOurAppText{
+         &__h{
+            @include H4;
+            color: $white;
+         }
+   
+         &__p{
+            @include Rob-400;
+            font-size: 1.6rem;
+            line-height: 201%;
+            color: $white;
+            margin-bottom: 3rem;
+         }
+   
+         &__buttons{
+            @include Flex1;
+            justify-content: flex-start;
+   
+            a{
+               img{
+                  height: 5rem;
+               }
+   
+               &:not(:last-child){
+                  margin-right: 2rem;
+               }
+            }
+         }
+      }
+   }
+
+   
+}
+
+
+@media screen and (max-width: 1300px){
+   .mycoAppWrap{
+      
+      .mycoApp{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-column-gap: 4rem;
+      }
+   }
+
+   .appsOurAppWrap{
+      
+      .appsOurApp{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-column-gap: 4rem;
+      }
+   }
+}
+
+@media screen and (max-width: 900px){
+   .mycoAppWrap{
+      
+      .mycoApp{
+         display: block;
+      }
+
+      .mycoAppImg{
+         display: none;
+      }
+   }
+
+   .appsOurAppWrap{
+      
+      .appsOurApp{
+         display: block;
+      }
+
+      .appsOurAppImg{
+         display: none;
+      }
+   }
+}
+
+@media screen and (max-width: 420px){
+   .appsOurAppWrap{
+      .appsOurApp{
+         .appsOurAppText{
+
+            &__buttons{
+               display: block !important;
+      
+               a{
+                  display: block;
+                  img{
+                     height: 5rem;
+                  }
+      
+                  &:not(:last-child){
+                     margin-right: 0rem;
+                     margin-bottom: 2rem;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

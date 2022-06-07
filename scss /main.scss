@@ -1,0 +1,86 @@
+/*-------------------
+    BASE FILES
+-------------------*/ 
+@import 'base/reset'; // reset the document, font size to 10rem, zeroes padding and margin
+
+/*--------------------
+    ABSTRACT FILES
+---------------------*/ 
+/*colors*/
+@import 'abstract/colors'; 
+//fonts and text 
+@import 'abstract/fontsAndText'; 
+//animations
+@import'abstract/animations';
+// buttons 
+@import 'abstract/buttonsAndLinks';
+//display
+@import 'abstract/display';
+
+/*--------------------
+    LAYOUT FILES
+--------------------*/
+@import 'layout/topNav';
+@import 'layout/mainNav';
+@import 'layout/header';
+@import 'layout/smallHeader';
+@import 'layout/testimonials';
+@import 'layout/getInTouch';
+@import 'layout/footer';
+@import 'layout/rooms';
+@import 'layout/floorPlan';
+@import 'layout/pricingMatrix';
+@import 'layout/whichServiceChart';
+@import 'layout/timelineCarousel';
+@import 'layout/officesMap';
+
+
+/*------------------
+    ELEMENTS
+------------------*/
+// drop downs 
+@import 'elements/dropDown';
+// modals 
+@import 'elements/modals';
+// forms 
+@import 'elements/forms';
+//tooltips
+@import 'elements/tooltips';
+//lists
+@import 'elements/lists';
+//video
+@import 'elements/video';
+//slider 1
+@import 'elements/slider1';
+
+
+
+
+/*-----------------ok 
+    CONTAINERS
+-------------------*/
+@import 'containers/containers';
+@import 'containers/boxes1';
+
+
+
+/*---------------
+    PAGES
+----------------*/
+@import 'pages/index';
+@import 'pages/ourOffice';
+@import 'pages/meetingRooms';
+@import 'pages/locations';
+@import 'pages/contact';
+@import 'pages/pricingPage';
+@import 'pages/faq';
+@import 'pages/app';
+@import 'pages/hotDesk';
+@import 'pages/businessLounge';
+@import 'pages/officeSpace';
+@import 'pages/desk.scss';
+@import 'pages/services';
+@import 'pages/termsAndConditions';
+@import 'pages/companyF';
+@import 'pages/about';
+@import 'pages/partners';

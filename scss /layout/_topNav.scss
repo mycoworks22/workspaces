@@ -1,0 +1,160 @@
+.topNavWrap{
+   width: 100%;
+   background-color: $dBlue;
+   padding: 2rem 0;
+
+   .topNav{
+      @include Flex1;
+
+      &__right{
+         @include Flex1;
+      }
+
+      .topNavPhone{
+         @include Flex1;
+         padding: 1rem 0;
+
+         p{
+            @include Rob-500;
+            font-size: 2rem;
+            color: $white;
+         }  
+
+         i{
+            font-size: 2rem;
+            color: $white;
+            margin-right: 1rem;
+         } 
+      }
+
+      .topNav10{
+         @include basicBtn2;
+         padding: 1.2rem 2rem;
+         font-size: 1.7rem;
+         margin-right: 3rem;
+      }
+
+      .topNavCart{
+         a{
+            transition: all 0.5s ease;
+   
+            i{
+               font-size: 1.8rem;
+               color: $white;
+            }
+   
+            &:hover{
+               i{
+                  color: $teal;
+               }
+            }
+         }
+      }
+
+      .topNavDivide{
+         height: 2rem;
+         width: 2px;
+         background-color: $white;
+         margin: 0 3rem;
+      }
+
+      .topNavSocials{
+         @include Flex1;
+         align-items: flex-end;
+
+         &__link{
+            transition: all 0.5s ease;
+
+            &:not(:last-child){
+               margin-right: 1.5rem;
+            }
+
+            i{
+               font-size: 2rem;
+               color: $white;
+            }
+
+            &--tw{
+               &:hover{
+                  i{
+                     color: #1DA1F2;
+                  }
+               }
+            }
+
+            &--f{
+               &:hover{
+                  i{
+                     color: #4267B2;
+                  }
+               }
+            }
+
+            &--in{
+         
+               &:hover{
+                  i{
+                     color:#2867B2;
+                  }
+               }
+            }
+
+            &--inst{
+         
+               &:hover{
+                  i{
+                     color:#E1306C;
+                  }
+               }
+            }
+
+            &--yt{
+         
+               &:hover{
+                  i{
+                     color:#FF0000;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 700px){
+   .topNavWrap{
+      padding: 1.5rem 0;
+
+      .topNav{
+
+         .topNavDivide{
+            display: none;
+         }
+
+         .topNavSocials{
+            display: none;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 450px){
+   .topNavWrap{
+   
+      .topNav{
+         display: block;
+   
+         &__right{
+            @include Flex1;
+         }
+   
+         .topNavPhone{
+            @include Flex1;
+            justify-content: center;
+            margin-bottom: 2rem;
+         }
+   
+      }
+   }
+}
+

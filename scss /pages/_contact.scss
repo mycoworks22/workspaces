@@ -1,0 +1,348 @@
+.contactUsWrap{
+     padding-top: 6rem;
+}
+
+
+.contactUs-Locations-Wrap{
+     margin: 6rem auto;
+     display: grid;
+     grid-template-columns: 1fr max-content;
+     grid-template-rows: 1fr;
+     justify-items: stretch;
+     align-items: stretch;
+
+     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+     border-radius: 6px;
+
+     //CONTACT FORM
+     .contactUsFormWrap{
+          background-color: white;
+          padding: 5rem;
+          padding-right: 6rem;
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+
+          &__h1{
+               width: 100%;
+               @include Rob-400;
+               font-size: 2.6rem;
+               color: $dBlue;
+               text-align: center;
+               line-height: 160%;
+               margin-bottom: 2rem;
+          }
+
+          &__h2{
+               @include P1;
+               text-align: center;
+               width: 100%;
+               max-width: 40rem;
+               margin: auto;
+               margin-bottom: 4rem;
+          }
+
+          .contactUsForm{
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               grid-template-rows: max-content max-content max-content max-content;
+               grid-column-gap: 2rem;
+               grid-row-gap: 2rem;
+
+               &__name{
+                    grid-column: 1 / span 1;
+                    grid-row: 1 / span 1;
+               }
+
+               &__email{
+                    grid-column: 1 / span 1;
+                    grid-row: 2 / span 1;
+               }
+
+               &__company{
+                    grid-column: 2 / span 1;
+                    grid-row: 1 / span 1;
+               }
+
+               &__service{
+                    grid-column: 2 / span 1;
+                    grid-row: 2 / span 1;
+               }
+
+               &__message{
+                    grid-column: 1 / span 2;
+                    grid-row: 3 / span 1;
+
+                    height: 25rem;
+               }
+
+               &__submitAndCapcha{
+                    grid-column: 1 / span 2;
+                    grid-row: 4 / span 1;
+                    justify-self: end;
+
+                    @include Flex1;
+                    justify-content: flex-end;
+               
+                    input{
+                         padding: 2rem 5rem;
+                         margin: 1rem 0;
+                         margin-left: 2rem;
+                         max-width: 100%;
+                    }
+
+               }
+          }
+     }
+
+   //LOCATIONS
+     .locationsAddressWrap{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr max-content;
+
+          .locationsAddressInner{
+               background-color: $teal;
+               padding: 4rem 8rem;
+
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+
+               .locationsAddress{
+                    display: grid;
+                    grid-template-columns: max-content 1fr;
+                    grid-template-rows: max-content max-content;
+                    grid-row-gap: 1rem;
+                    grid-column-gap: 1rem;
+     
+                    &__pin{
+                         grid-column:  1 / span 1;
+                         grid-row: 1 / span 2;
+                         width: 3rem;
+                    }
+     
+                    &__name{
+                         grid-column:  2 / span 1;
+                         grid-row: 1 / span 1;
+     
+                         @include Rob-400;
+                         font-size: 2.2rem;
+                         color: $white;
+                    }
+     
+                    &__address{
+                         grid-column:  2 / span 1;
+                         grid-row: 2 / span 1;
+     
+                         @include Rob-400;
+                         font-size: 1.6rem;
+                         line-height: 160%;
+                         color: $white;
+                    }
+     
+                    &:not(:first-child){
+                         padding-top: 2rem;
+                    }
+               }
+          }
+
+          .locationsAddressAdditional{
+               background-color: $dBlue;
+               padding: 4rem 8rem;
+
+               .phoneNumber{
+                    width: fit-content;
+                    margin: auto;
+     
+                    i{
+                         font-size: 1.8rem;
+                         color: $white;
+                         margin-right: 1rem;
+                    }
+     
+                    p{
+                         @include Rob-400;
+                         font-size: 2rem;
+                         color: $white;
+                    }
+               }
+     
+               .emailAddress{
+                    margin: auto;
+                    margin-top: 2rem;
+                    @include Flex1;
+                    justify-content: flex-start;
+                    width: fit-content;
+     
+                    i{
+                         font-size: 1.8rem;
+                         color: $white;
+                         margin-right: 1rem;
+                    }
+     
+                    a{
+                         @include Rob-400;
+                         font-size: 2rem;
+                         color: $white;
+                         text-decoration: none;
+                    }
+               }
+     
+               .socialLinks{
+                    margin-top: 3rem;
+                    @include Flex1;
+                    justify-content: center;
+     
+                    a{
+                         text-decoration: none;
+                         transition: all 0.5s ease;
+     
+                         i{
+                              color: $white;
+                              font-size: 2rem;
+                              margin: 0 2rem;
+                         }
+     
+                         .fa-linkedin-in:hover{
+                              color: #3B5998;
+                         }
+                         .fa-facebook-f:hover{
+                              color: #3B5998;
+                         }
+                         .fa-twitter:hover{
+                              color: #55ACEE;
+                         } 
+                         .fa-instagram:hover{
+                              color:#E1306C;
+                         }
+                         .fa-youtube:hover{
+                              color:#FF0000;
+                         }
+                    }
+               }
+          }
+
+          
+     }
+}
+
+
+@media screen and (max-width: 1164px){
+     .contactUs-Locations-Wrap{
+          display: block;
+          box-shadow: none;
+          border-radius: 6px;
+     
+          //CONTACT FORM
+          .contactUsFormWrap{
+               background-color: white;
+               padding: 2rem 2rem 2rem 2rem;
+               border-top-left-radius: 6px;
+               border-bottom-left-radius: 0px;
+               border-top-right-radius: 6px;
+          }      
+     }
+}
+
+@media screen and (max-width: 600px){
+     .contactUs-Locations-Wrap{
+          .contactUsFormWrap{
+               .contactUsForm{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: max-content max-content max-content max-content max-content max-content;
+                    grid-row-gap: 2rem;
+     
+                    &__name{
+                         grid-column: 1 / span 1;
+                         grid-row: 1 / span 1;
+                    }
+     
+                    &__email{
+                         grid-column: 1 / span 1;
+                         grid-row: 2 / span 1;
+                    }
+     
+                    &__company{
+                         grid-column: 1 / span 1;
+                         grid-row: 3 / span 1;
+                    }
+     
+                    &__service{
+                         grid-column: 1 / span 1;
+                         grid-row: 4 / span 1;
+                    }
+     
+                    &__message{
+                         grid-column: 1 / span 1;
+                         grid-row: 5 / span 1;
+     
+                         height: 15rem;
+                    }
+     
+                    &__submitAndCapcha{
+                         grid-column: 1 / span 1;
+                         grid-row: 6 / span 1;
+                         justify-self: end;
+                         
+                    }
+               }
+          }
+
+          .locationsAddressWrap{
+               .locationsAddressInner{
+                    padding: 4rem 4rem;
+               }
+
+               .locationsAddressAdditional{
+                    padding: 4rem 4rem;
+
+                    .socialLinks{
+                         margin-top: 3rem;
+                         @include Flex1;
+                         justify-content: center;
+          
+                         a{
+          
+                              i{
+                                   color: $white;
+                                   font-size: 1.8rem;
+                                   margin: 0 1.5rem;
+                              }
+          
+                         }
+                    }
+               }
+          }
+          
+          
+     }
+}
+
+@media screen and (max-width: 500px){
+     .contactUs-Locations-Wrap{
+          .locationsAddressWrap{
+               .locationsAddressInner{
+                    padding: 2rem 1rem;
+               }
+
+               .locationsAddressAdditional{
+                    padding: 2rem 1rem;
+
+                    .phoneNumber{
+                         i{
+                              display: none;
+                         }
+                    }
+
+                    .emailAddress{
+                         i{
+                              display: none;
+                         }
+                    }
+               }
+          }
+          
+          
+     }
+}

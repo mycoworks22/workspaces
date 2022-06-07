@@ -1,0 +1,23 @@
+@mixin Flex1 {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+@mixin Flex2 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.hide{
+   display: none !important;
+}
+.show1{
+   display: block !important;
+}
+.show2{
+   display: flex !important;
+}

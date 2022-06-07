@@ -1,0 +1,16 @@
+.freeCompanyFormationIntro{
+   padding: 6rem 0;
+
+   p{
+      @include P1;
+      font-size: 1.8rem;
+      line-height: 180%;
+      margin-bottom: 6rem;
+   }
+
+   a{
+      @include basicLink1;
+   }
+
+}
+

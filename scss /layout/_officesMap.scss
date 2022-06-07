@@ -1,0 +1,324 @@
+.officesMap{
+   width: 50%;
+   display: grid;
+   grid-template-columns: 14fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 32fr;
+   grid-template-rows: 12fr 1fr 1fr 8fr 1fr 3fr 1fr 1fr 1fr 1fr 6fr;
+
+   &__map1{
+      display: block;
+      width: 100% !important;
+
+      grid-column: 1 / span 13;
+      grid-row:  1 / span 11;
+      justify-self: stretch;
+      align-self: stretch;
+   }
+
+   &__map2{
+      width: 100% !important;
+
+      grid-column: 1 / span 12;
+      grid-row:  1 / span 11;
+      justify-self: stretch;
+      align-self: stretch; 
+
+      display: none;
+   }
+
+   &__pin{
+      position: relative;
+
+      img{
+         display: block;
+         position: absolute !important;
+         cursor: pointer;
+         object-fit: contain;
+      
+      }
+
+      &:hover{
+         cursor: pointer;
+         p{
+            display: block;
+            @include slideD-5px;
+         }
+      }
+
+
+      &--cardif{
+         grid-column: 2 / span 1;
+         grid-row:  9 / span 2;
+
+         img{
+            width: 100%;
+            transform:translateY(70%);
+         }
+      }
+
+      &--london1{
+         grid-column: 9 / span 1;
+         grid-row:  10 / span 1;
+
+         img{
+            width: 100%;
+            transform:translateY(10%);
+         }
+      }
+
+      &--london2{
+         grid-column: 8 / span 1;
+         grid-row:  10 / span 1;
+
+         img{
+            width: 100%;
+            transform:translateY(-10%);
+         }
+      }
+
+      &--london3{
+         grid-column: 8 / span 2;
+         grid-row:  9 / span 1;
+
+         img{
+            width: 50%;
+            margin: 0 auto;
+            transform:translate(60%, 0%);
+         }
+      }
+
+      &--ipswich{
+         grid-column: 11 / span 1;
+         grid-row:  7 / span 2;
+
+         img{
+            width: 100%;
+            transform:translateY(70%);
+         }
+      }
+
+      &--cambridge{
+         grid-column: 8 / span 2;
+         grid-row: 7 / span 1;
+
+         img{
+            width: 50%;
+            transform:translate(50%, 20%);
+         }
+      }
+
+      &--manchester{
+         grid-column: 3 / span 2;
+         grid-row: 5 / span 1;
+
+         img{
+            width: 50%;
+            transform:translate(50%, 10%);
+         }
+      }
+
+      &--edinburgh1{
+         grid-column: 3 / span 1;
+         grid-row: 3 / span 1;
+
+         img{
+            width: 100%;
+         }
+      }
+
+      &--edinburgh2{
+         grid-column: 2 / span 1;
+         grid-row: 2 / span 2;
+
+         img{
+            width: 100%;
+            transform:translateY(50%);
+         }
+      }
+      
+   }
+   
+   &__address{
+      z-index: 100 !important;
+      position: absolute;
+
+      display: none;
+
+      width: 25rem;
+
+      background-color: $dBlue;
+      padding: 2rem;
+      border-radius: 6px;
+      border-bottom-left-radius: 0px;
+
+      @include P1;
+      color: $white;
+      text-align: center;
+
+      transition: ease 1s;
+
+
+      &::after {
+         content: "";
+         position: absolute;
+         top: 99.9%;
+         left: 0;
+
+         border: 6px solid transparent;
+         border-left-color: $dBlue;
+         border-top-color: $dBlue;
+
+      }
+
+      &--ed2{
+         bottom: 125%;
+         left: 50%;
+      }
+
+      &--ed1{
+         bottom: 175%;
+         left: 50%;
+      }
+
+      &--man{
+         bottom: 175%;
+         left: 50%;
+      }
+
+      &--cam{
+         bottom: 175%;
+         left: 50%;
+      }
+
+      &--ipsw{
+         bottom: 115%;
+         left: 50%;
+      }
+
+      &--lnd3{
+         bottom: 175%;
+         left: 50%;
+      }
+
+      &--lnd2{
+         bottom: 200%;
+         left: 50%;
+      }
+
+      &--lnd1{
+         bottom: 175%;
+         left: 50%;
+      }
+
+      &--cardif{
+         bottom: 115%;
+         left: 50%;
+      }
+
+      display: none;
+   }
+}
+
+@media screen and (max-width: 500px){
+   .officesMap{
+   
+      display: grid;
+      grid-template-columns: 14fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 12fr 1fr 1fr 8fr 1fr 3fr 1fr 1fr 1fr 1fr 6fr;
+   
+      &__map1{
+         display: none;
+      }
+   
+      &__map2{
+         width: 100% !important;
+         display: block;
+      }
+      
+      &__address{
+         width: 18rem;
+         padding: 1rem;
+
+         border-bottom-left-radius: 6px;
+
+         &::after {
+            content: "";
+            position: absolute;
+            top: 99.9%;
+            left: 50%;
+            margin-left: -10px;
+
+            border: 10px solid transparent;
+            border-top-color: $dBlue;
+         }
+
+         &--ed2{
+            bottom: calc(75% + 20px);
+            left: -80px;
+         }
+   
+         &--ed1{
+            bottom: calc(100% + 20px);
+            left: -80px;
+         }
+   
+         &--man{
+            bottom: calc(100% + 20px);
+            left: -70px;
+         }
+   
+         &--cam{
+            bottom: calc(100% + 20px);
+            left: -120px;
+
+            &::after {
+               left: 75%;
+            }
+            
+         }
+   
+         &--ipsw{
+            bottom: calc(75% + 20px);
+            left: -160px;
+
+            &::after {
+               left: 100%;
+               margin-left: -30px;
+            }
+         }
+   
+         &--lnd3{
+            bottom: calc(100% + 20px);
+            left: -120px;
+
+            &::after {
+               left: 75%;
+            }
+         }
+   
+         &--lnd2{
+            bottom: calc(100% + 20px);
+            left: -130px;
+
+            &::after {
+               left: 75%;
+            }
+         }
+   
+         &--lnd1{
+            bottom: calc(100% + 20px);
+            left: -130px;
+
+            &::after {
+               left: 75%;
+            }
+         }
+   
+         &--cardif{
+            bottom: calc(75% + 20px);
+            left: -80px;
+         }
+      }
+   }
+}
+
+

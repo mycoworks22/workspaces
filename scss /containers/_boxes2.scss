@@ -1,0 +1,209 @@
+.boxes2{
+   width: 90%;
+   max-width: 1200px;
+   margin: auto;
+
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+   column-gap: 2rem;
+   row-gap: 0;
+   justify-items: stretch;
+   align-items: stretch;
+
+   .box{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 20rem 27rem 4rem 1fr;
+      column-gap: 0;
+      row-gap: 0;
+      justify-items: stretch;
+      align-items: stretch;
+   
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+   
+   
+      //MOST POP
+      &__mostPop{
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 1;
+   
+         img{
+            display: block;
+            height: 19rem;
+            margin-left: auto;
+         }
+      }
+   
+      //TOP 
+      &__top{
+         grid-column: 1 / span 1;
+         grid-row: 2 / span 1;
+   
+         img{
+            display: block;
+            width: 22rem;
+            padding: 0rem 2rem 5rem 2rem;
+         }
+      }
+      //ANGLE
+      &__angle{
+         grid-column: 1 / span 1;
+         grid-row: 3 / span 1;
+         background-image: url('../img/angle1-2-blue.png');
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: bottom center;
+      }
+      //MORE
+      &__more{
+         grid-column: 1 / span 1;
+         grid-row: 4 / span 1;
+         
+         padding: 2rem 2rem 2rem;
+         background-color: $dBlue2;
+   
+         @include Flex1;
+         
+   
+         a{
+            @include basicBtn3;
+            font-size: 2rem;
+            padding: 2rem 3rem;
+            margin-left: 1rem;
+   
+         }
+      }
+
+      &__moreInner{
+         padding: 0 !important;
+         align-self: flex-start !important;
+         max-width: 38rem;
+
+         h2{
+            @include Rob-700;
+            font-size: 2.8rem;
+            line-height: 140%;
+            color: $white;
+            text-align: left;
+         }
+   
+         p{
+            @include Rob-400;
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $white;
+            margin-top: 1rem;
+            text-align: left;
+            margin-bottom: 0;
+         }
+   
+         ul{
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+            li{
+               @include Rob-400;
+               font-size: 1.8rem;
+               line-height: 147%;
+               color: $white;
+            }
+         }
+
+         &--headingOnly{
+            align-self: center !important;
+            justify-self: flex-start !important ;
+         }
+      }
+   
+      &--regOffAddPlusDirector{
+         background-image: urlurl('../img/services-banners/ROA-DSA.png');
+      }
+   
+      &--VirtBussinesAddressTelAnsw{
+         background-image: url('../img/services-banners/ROA-DSA.png');
+      } 
+   
+      &--VirtBussinesPlusTelAnsw{
+         background-image: url('../img/services-banners/ROA-DSA.png');
+      }
+   
+      &--meetingRooms{
+         background-image: url('../img/services-banners/ROA-DSA.png');
+      }
+   
+      &--virtBussinesPlus{
+         background-image: url('../img/services-banners/ROA-DSA.png');
+      }
+   
+      &--webHosting{
+         background-image: url('../img/services-banners/ROA-DSA.png');
+      }
+      &--VirtBussinesAddress{
+         background-image: url('../img/services-banners/ROA-DSA.png');
+      }
+   }
+}
+
+// @media screen and (max-width: 1320px){
+//    .boxes2{
+//       .box{
+//          &__more{
+//             @include Flex1;
+//             flex-direction: column;
+//             justify-content: space-between;
+      
+//             a{
+//                @include Btn3;
+//                font-size: 2rem;
+//                margin-left: 0rem;
+//                margin-top: 1rem;
+//             }
+//          }
+   
+//          &__moreInner{
+//             padding: 0 !important;
+//             align-self: center !important;
+//             max-width: 100%;
+   
+//             h2{
+//                @include F1B;
+//                font-size: 2.8rem;
+//                line-height: 140%;
+//                color: $white;
+//                text-align: center;
+//             }
+      
+//             p{
+//                @include F1R;
+//                font-size: 1.8rem;
+//                line-height: 140%;
+//                color: $white;
+//                margin-top: 1rem;
+//                text-align: center;
+//                margin-bottom: 0;
+//             }
+      
+//          }
+//       }
+//    }
+// }
+
+// @media screen and (max-width: 1024px){
+//    .boxes2{
+//       width: 100%;
+//       column-gap: 0rem;
+//    }
+// }
+
+// @media screen and (max-width: 900px){
+//    .boxes2{
+      
+//       display: grid;
+//       grid-template-columns: 1fr;
+//       grid-template-rows: 1fr 1fr;
+//       column-gap: 0;
+//       row-gap: 2rem;
+//    }
+// }

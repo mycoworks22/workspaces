@@ -1,0 +1,251 @@
+.testimonialsWrap{
+   margin-bottom: 6rem;
+   width: 100%;
+   display: grid;
+   grid-template-columns: 60rem 1fr;
+   grid-template-rows: max-content;
+
+   &__left{
+      justify-self: stretch;
+      align-self: stretch;
+
+      img{
+         display: block;
+         object-fit: cover;
+         width: 100%;
+         min-width: 100%;
+         max-width: 100%;
+         height: 100%;
+         min-width: 100%;
+         max-height: 100%;
+      }
+   }
+
+   &__right{
+      background-color: $grey1;
+      padding: 5rem;
+
+
+      h1{
+         @include H3;
+      }
+   }
+
+   // testimonials container 
+   .testimonials{
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 5rem;
+
+      overflow: hidden;
+   }
+
+   .testimonialsInner{
+      display: flex;
+      flex-wrap: nowrap;
+   }
+   
+   //testimonial
+   .testimonial{
+      width: 100% !important;
+      min-width: 100%;
+
+      &__image{
+         width: 8rem;
+         margin: auto;
+
+         display: grid;
+         grid-template-columns: 8rem;
+         grid-template-rows: 6rem 2rem 2rem;
+
+         img{
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 2;
+            display: block;
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+         }
+
+         i{
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 2;
+            justify-self: center;
+            z-index: 2;
+            font-size: 4rem;
+            color: $teal;
+         }
+      }
+
+      &__review{
+         @include Lato-400;
+         font-size: 1.8rem;
+         line-height: 200%;
+         color: $black;
+         text-align: center;
+
+         padding: 5rem 0;
+         max-width: 79rem;
+         margin: auto;
+      }
+
+      &__author{
+         @include Lato-700;
+         font-size: 1.8rem;
+         line-height: 200%;
+         color: $teal;
+         text-align: center;
+      }
+   }
+
+   //controls
+   .controls{
+      @include Flex1;
+      width: 8rem;
+      margin: auto;
+      margin-bottom: 5rem;
+      margin-top: 5rem;
+
+      .control{
+         font-size: 1.5rem;
+         color: $grey2;
+         transition: all 0.5s ease;
+         cursor: pointer;
+
+         &:hover{
+            color: $teal;
+         }
+
+         &--active{
+            color: $teal;
+         }
+      }
+   }
+
+   //trustPilot
+   .trustPilot{
+      width: fit-content;
+      margin: auto;
+
+      a{
+         text-decoration: none;
+         @include Rub-400;
+         font-size: 1.6rem;
+         line-height: 200%;
+         color: $black;
+         text-align: center;
+
+         img{
+            display: block;
+            margin: auto;
+            width: 11rem;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1164px){
+   .testimonialsWrap{
+      display: block;
+
+      &__left{
+         display: none;
+      }
+
+      .testimonial{
+         width: 100%;
+   
+         &__image{
+            width: 8rem;
+            margin: auto;
+   
+            display: grid;
+            grid-template-columns: 8rem;
+            grid-template-rows: 6rem 2rem 2rem;
+   
+            img{
+               grid-column: 1 / span 1;
+               grid-row: 1 / span 2;
+               display: block;
+               width: 8rem;
+               height: 8rem;
+               border-radius: 50%;
+            }
+   
+            i{
+               grid-column: 1 / span 1;
+               grid-row: 2 / span 2;
+               justify-self: center;
+               z-index: 2;
+               font-size: 4rem;
+               color: $teal;
+            }
+         }
+   
+         &__review{
+            @include Lato-400;
+            font-size: 1.8rem;
+            line-height: 200%;
+            color: $black;
+            text-align: center;
+   
+            padding: 5rem 0;
+            max-width: 79rem;
+            margin: auto;
+         }
+   
+         &__author{
+            @include Lato-700;
+            font-size: 1.8rem;
+            line-height: 200%;
+            color: $teal;
+            text-align: center;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 900px){
+   .testimonialsWrap{
+      &__right{
+         background-color: $grey1;
+         padding: 2rem 5%;
+      }
+
+      .testimonial{
+         &__image{
+            width: 5rem;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 5rem;
+            grid-template-rows: 4rem 1rem 1rem;
+
+            img{
+               width: 5rem;
+               height: 5rem;
+            }
+
+            i{
+               font-size: 2rem;
+            }
+         }
+         &__review{
+            font-size: 1.6rem;
+            padding: 2rem;
+         }
+         &__author{
+            @include Lato-700;
+            font-size: 1.4rem;
+            line-height: 120%;
+            color: $teal;
+            text-align: center;
+         }
+      }
+
+      .controls{
+         margin-bottom: 2rem;
+         margin-top: 1rem;
+      }
+   }
+}

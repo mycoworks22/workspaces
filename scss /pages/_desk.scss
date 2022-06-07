@@ -1,0 +1,260 @@
+.deskWrap{
+   padding: 6rem 0;
+   display: flex;
+
+   .deskAmenities{
+      width: 50%;
+      display: block;
+
+      &__image{
+         width: 100%;
+         height: 50rem;
+         margin-bottom: 2rem;
+
+         img{
+            display: block;
+            width: 100%;
+            min-width: 100%;
+            height: 100%;
+            min-height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      &__amenities{
+         h2{
+            @include H4;
+            margin-bottom: 3rem;
+         }
+
+         ul{
+            list-style: none;
+            margin-bottom: 2rem;
+
+            li{
+               @include Flex1;
+               flex-wrap: nowrap;
+               justify-content: start;
+
+               @include Rob-400;
+               font-size: 1.6rem;
+               color: $black;
+               margin-bottom: 1rem;
+
+               i{
+                  font-size: 8px;
+                  color: $teal;
+                  margin-right: 1rem;
+               }
+            }
+         }
+
+         a{
+            @include basicBtn1;
+            padding: 1.5rem 3rem;
+            @include Rub-400;
+            font-size: 1.6rem;
+         }
+      }
+   }
+
+   .deskInfo{
+      width: 50%;
+      max-width: 50% !important;
+      display: grid;
+      grid-template-rows: max-content 5rem max-content;
+      grid-template-columns: 1fr;
+
+      .deskInfoBook{
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 2;
+
+         padding: 5rem 5rem 10rem 5rem;
+         background-color: $grey1;
+
+         display: flex;
+         flex-wrap: wrap;
+
+         h2{
+            @include H4;
+            margin-bottom: 3rem;
+         }
+
+         &__text{
+            width: 100%;
+            max-width: 100%;
+            @include Rob-400;
+            font-size: 1.6rem;
+            line-height: 190%;
+            color: $black;
+            margin-bottom: 3rem;
+         }
+
+         &__price{
+            @include Rob-500;
+            font-size: 1.6rem;
+            color: $teal;
+            margin-right: 3rem;
+
+            span{
+               @include Rob-500;
+               font-size: 3.8rem;
+               line-height: 160%;
+            }
+         }
+
+         &__book{
+            @include basicBtn1;
+            padding: 1.5rem 3rem;
+            @include Rub-400;
+            font-size: 1.6rem;
+         }
+      }
+
+      .deskInfoCarousel{
+
+         width: 100%;
+         max-width: 100%;
+         grid-column: 1 / span 1;
+         grid-row: 2 / span 2;
+
+         .deskCarousel{
+            display: grid;
+            grid-template-columns: 5rem 1fr 5rem;
+            grid-template-rows: 1fr;
+            align-items: center;
+
+            &__control{
+               padding: 0 1.5rem;
+               
+               i{
+                  font-size: 3rem;
+                  color: $teal;
+                  cursor: pointer;
+                  transition: all 0.5s ease;
+
+                  &:hover{
+                     color: $teal3;
+                  }
+               }
+            }
+
+            .deskCarouselTrack{
+               overflow: hidden;
+
+               .deskCarouselSlides{
+                  width: 100%;
+                  height: 46rem;
+                  @include Flex1;
+                  flex-wrap: nowrap;
+               }
+
+               .deskCarouselSlide{
+                  width: 100%;
+                  min-width: 100%;
+
+                  img{
+                     display: block;
+                     max-width: 100%;
+                     width: 100%;
+                     height: 46rem;
+                     object-fit: cover;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+.deskDescrWrap{
+   padding: 6rem 0;
+   background-color: $grey1;  
+
+   .deskDescription{
+      h2{
+         @include H1;
+         //font-weight: 400;
+         font-size: 2.8rem;
+      }
+
+      p{
+         @include P1;
+      }
+   }
+}
+
+@media screen and (max-width: 1224px){
+   .deskWrap{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content max-content;
+      grid-row-gap: 6rem;
+
+      .deskAmenities{
+         width: 100%;
+         grid-column: 1 / span 1;
+         grid-row: 2 / span 1;
+
+         &__image{
+            display: none;
+         }
+      }
+
+      .deskInfo{
+         width: 100%;
+         max-width: 100%;
+         min-width: 100%;
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 1;
+      }
+   }
+}
+
+
+@media screen and (max-width: 550px){
+   .deskWrap{
+      .deskInfo{
+         .deskInfoCarousel{
+            .deskCarousel{
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               grid-template-rows: max-content max-content;
+               grid-row-gap: 2rem;
+
+               &__control{
+                  &--prev{
+                     grid-column: 1 / span 1;
+                     grid-row: 2 / span 1;
+                     justify-self: end;
+                  }
+
+                  &--next{
+                     grid-column: 2 / span 1;
+                     grid-row: 2 / span 1;
+                  }
+               }
+
+               .deskCarouselTrack{
+                  grid-column: 1 / span 2;
+                  grid-row: 1 / span 1;
+                  justify-self: center;
+
+                  width: 100%;
+                  max-width: 320px;
+
+                  .deskCarouselSlides{
+                     height: 320px;
+                  }
+
+                  .deskCarouselSlide{
+                     img{
+                        height: 320px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,153 @@
+// ALL MODAL CONTAINERS 
+.modalContainer{
+   z-index: 20000;
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   min-width: 100%;
+   min-height: 100%;
+   max-height: fit-content;
+   overflow: hidden;
+
+   @include Flex2;
+   display: none;
+
+   background-color: rgba(44, 59, 88, 0.1);
+
+   transition: all 1s ease-in-out;
+}
+
+
+.modal{
+   width: 90%;
+   max-width: 80rem;
+   height: fit-content;
+   max-height: 95%;
+   overflow: auto;
+   transform:translateY(-150%);
+   transition: all 1.2s ease-in-out;
+
+   background-color: white;
+   padding: 3rem;
+   border-radius: 6px;
+   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
+
+   &::-webkit-scrollbar { width: 0 !important }
+   overflow: -moz-scrollbars-none;
+   -ms-overflow-style: none;
+
+   &__head{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      h1{
+         @include Rob-500;
+         color: $dBlue;
+         font-size: 2rem;
+         margin-bottom: 3rem;
+         line-height: 10 0%;
+      }
+
+      i{
+         color: $teal;
+         font-size: 2rem;
+         transition: all 0.5s ease;
+         margin-left: 5rem;
+
+         &:hover{
+            color: $dBlue;
+            cursor: pointer;
+         }
+      }
+   }
+
+
+}
+
+
+
+// OUR LOCATIONS 
+.locationMapModal{
+
+   &__p{
+      @include P1;
+      text-align: center;
+      color: $teal;
+      margin: auto;
+      margin-bottom: 2rem;
+   }
+
+   &__map{
+      position: initial;
+      text-align: right;
+      max-height: 40rem;
+      overflow-y: hidden !important;
+
+      .gmap_canvas {
+         background:none!important;
+         max-height: 400px;
+         width:100%;
+      }
+   }
+}
+
+#discountModalWrap{
+   h3{
+      @include Rob-700;
+      font-size: 2rem;
+      text-align: center;
+      color: $dBlue;
+      margin-bottom: 5rem;
+   }
+
+   #discountInput{
+      margin-bottom: 3rem;
+   }
+
+   #discountSubmit{
+      padding: 1rem 2rem;
+      @include Rob-400;
+      font-size: 1.6rem;
+      margin: auto;
+      margin-bottom: 3rem;
+   }
+
+   p{
+      @include P1;
+      text-align: center;
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 3rem;
+   }
+
+   .closeDiscount1{
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      display: block;
+      width: fit-content;
+      margin-left: auto;
+      margin-bottom: 2rem;
+
+      
+      &:hover{
+         color: $teal;
+      }
+   }
+
+   .closeDiscount2{
+      @include Rob-500;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      
+      &:hover{
+         color: $teal;
+      }
+   }
+}

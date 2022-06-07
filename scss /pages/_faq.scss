@@ -1,0 +1,250 @@
+.mainFaqWrap{
+   margin-top: 6rem;
+
+   h1{
+      @include H3;
+   }
+
+   .mainFaq{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 4rem;
+
+      &__box{
+         
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: max-content 1fr;
+         grid-row-gap: 1rem;
+
+         .mainFaqQ{  
+            min-height: 10rem;
+            height: fit-content;
+            background-color: $grey2;
+            padding: 2rem;
+            @include Flex2;
+
+            h3{
+               text-align: center;
+               @include Rub-400;
+               font-size: 2.2rem;
+               line-height: 120%;
+               color: $black;
+            }
+         }
+
+         p{
+            @include Rub-400;
+            font-size: 1.6rem;
+            color: $black;
+            line-height: 190%;
+            text-align: justify;
+         }
+      }
+   }
+}
+
+.faqLinksWrap{
+   margin-top: 6rem;
+
+   .faqLinks{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 2rem;
+      align-items: stretch;
+      justify-items: stretch;
+
+      .link{
+         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr max-content;
+
+         &__head{
+            @include Rob-500;
+            font-size: 1.8rem;
+            color: $white;
+            line-height: 160%;
+            text-align: center;
+
+            padding: 6rem 1rem 4rem;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            &--1{ 
+                  background-image: linear-gradient(0deg, rgba(61, 61, 61, 0.4), rgba(61, 61, 61, 0.4)),
+                                    url('../img/faq1.png');
+            }
+
+            &--2{ 
+               background-image: linear-gradient(0deg, rgba(61, 61, 61, 0.4), rgba(61, 61, 61, 0.4)),
+                                 url('../img/faq2.png');
+            }
+
+            &--3{ 
+               background-image: linear-gradient(0deg, rgba(61, 61, 61, 0.4), rgba(61, 61, 61, 0.4)),
+                                 url('../img/faq3.png');
+            }
+
+            &--4{ 
+               background-image: linear-gradient(0deg, rgba(61, 61, 61, 0.4), rgba(61, 61, 61, 0.4)),
+                                 url('../img/faq4.png');
+            }
+
+         }
+
+         &__link{
+            background-color: $dBlue;
+            padding: 2rem 1rem;
+
+            a{
+               @include basicBtn2;
+               font-size: 1.6rem;
+               padding: 1.5rem 2rem;
+               margin: auto;
+            }
+         }
+      }
+   }
+}
+
+.whichServiceWrap{
+   margin: 6rem 0;
+}
+
+.faqPostalDepositWrap{
+
+   .faqPostalDeposit{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 500px;
+      height: fit-content;
+
+      &__left{
+         justify-self: stretch;
+         align-self: stretch;
+
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.85), rgba(44, 59, 88, 0.85)),
+                           url('../img/postal.png');
+         
+      }
+   }
+   
+   .PostalDeposit{
+      justify-self: start;
+      align-self: center;
+
+      width: 90%;
+      max-width: 600px;
+      padding: 6rem 0 6rem 6rem;
+
+      &__h2{
+         @include H4;
+         //font-size: 2.4rem;
+      }
+
+      &__p1{
+         @include P1;
+         line-height: 200%;
+         margin-bottom: 3rem;
+
+         span{
+            @include Rob-700;
+            font-size: 1.6rem;
+            color: $dBlue;
+         }
+      }
+
+      &__p2{
+         display: grid;
+         grid-template-columns: max-content 1fr;
+         align-items: start;
+
+         @include P1;
+
+         &:not(:last-child){
+            margin-bottom: 2rem;
+         }
+
+         i{
+            font-size: 1.3rem;
+            color: $teal;
+            padding: 0.6rem 1.5rem 0 1rem;
+         }
+         
+      }
+   }
+}
+
+@media screen and (max-width: 1124px){
+   .mainFaqWrap{
+   
+      .mainFaq{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: max-content max-content max-content;
+         grid-row-gap: 4rem;
+   
+         &__box{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content max-content;
+            grid-row-gap: 1rem;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1024px){
+   .faqPostalDepositWrap{
+
+      .faqPostalDeposit{
+         display: block;
+         min-height: fit-content;
+   
+         &__left{
+            display: none;
+         }
+      }
+      .PostalDeposit{
+         width: 90%;
+         max-width: 1200px;
+         margin: auto;
+         padding: 6rem 0 6rem 0rem;
+      }
+   }
+}
+
+@media screen and (max-width: 900px){
+   .faqLinksWrap{   
+      .faqLinks{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows:  1fr 1fr;
+         grid-column-gap: 2rem;
+         grid-row-gap: 2rem;
+         align-items: stretch;
+         justify-items: stretch;
+      }
+   }
+}
+
+@media screen and (max-width: 450px){
+   .faqLinksWrap{   
+      .faqLinks{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows:  1fr 1fr 1fr 1fr;
+         grid-column-gap: 2rem;
+         grid-row-gap: 2rem;
+         align-items: stretch;
+         justify-items: stretch;
+      }
+   }
+}

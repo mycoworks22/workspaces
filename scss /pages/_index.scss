@@ -1,0 +1,661 @@
+//WORKING SPACE
+.workingSpaceWrap{
+   width: 100%;
+   margin: 6rem 0 6rem 0;
+
+   .workingSpace{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 6rem;
+
+      &__left{
+         grid-column: 1 / span 1;
+      }
+
+      &__right{
+         grid-column: 2 / span 1;
+         padding-top: 5rem;
+
+         h2{
+            @include H2;
+         }
+
+         h1{
+            max-width: 50rem;
+            @include H4;
+         }
+
+         p{
+            @include P1;
+            margin-bottom: 5rem;
+         }
+
+         a{
+            @include basicBtn1;
+         }
+
+      }
+   }
+}
+
+
+// MYCO INTRO 
+.mycoIntroWrap{
+   width: 100%;
+   margin-bottom: 6rem;
+}
+.mycoIntro{
+   
+   background-color: $grey1;
+   padding: 5rem;
+
+   display: grid;
+   grid-template-columns: 1fr 474px;
+   grid-column-gap: 4rem;
+
+   //left side
+   .mycoIntroLeft{
+      h1{
+         @include H1;
+      }
+
+      p{
+         @include P1;
+         margin-bottom: 3rem;
+      }
+
+      a{
+         @include basicBtn1;
+      }
+   }
+
+   //right side
+   .mycoIntroRight{
+      @include Flex1;
+
+      ul{
+         @include List1;
+      }
+   }
+} 
+
+
+//LOCATE US
+.locateUsWrap{
+   width: 100%;
+   margin-bottom: 6rem;
+
+   .locateUs{
+      h1{
+         @include H3;
+      }
+   }
+}
+
+
+//VIDEO - styles for the video are in _vide0.scss
+.videoWrap{
+   width: 100%;
+   margin-bottom: 6rem;
+
+   h1{
+      @include H3;
+      width: 55rem;
+   }
+}
+
+
+//FEATURES
+.featuresWrap{
+   width: 100%;
+   margin-bottom: 6rem;
+
+   h1{
+      @include H3;
+   }
+
+   .features{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 5rem;
+      grid-row-gap: 5rem;
+
+      .feature{
+         img{
+            display: block;
+            width: 6.6rem;
+            margin: auto;
+            margin-bottom: 2rem;
+         }
+
+         h3{
+            @include Rub-500;
+            color: $black;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+         }
+
+         p{
+            @include P1;
+            text-align: center;
+            max-width: 28rem;
+            margin: auto;
+         }
+      }
+   }
+}
+
+//GALLERY
+.galleryWrap{
+   width: 100%;
+   margin-bottom: 6rem;
+
+   h1{
+      @include H3;
+   }
+
+   //gallery grid
+   .gallery{
+      display: grid;
+      grid-template-columns: 360px 360px minmax(0px, 1fr) 360px;
+      grid-column-gap: 2rem;
+      grid-template-rows: 340px 340px 340px;
+      grid-row-gap: 2rem;
+   }
+
+   //gallery box
+   .galleryBox{
+      &--1{
+         grid-column: 1 /span 1;
+         grid-row: 1 / span 1;
+         justify-self: stretch;
+         align-self: stretch;
+      }
+
+      &--2{
+         grid-column: 2 /span 2;
+         grid-row: 1 / span 1;
+         justify-self: stretch;
+         align-self: stretch;
+      }
+
+      &--3{
+         grid-column: 4 /span 1;
+         grid-row: 1 / span 1;
+         justify-self: stretch;
+         align-self: stretch;
+      }
+
+      &--4{
+         grid-column: 1 /span 1;
+         grid-row: 2 / span 1;
+         justify-self: stretch;
+         align-self: stretch;
+      }
+
+      &--5{
+         grid-column: 2 /span 1;
+         grid-row: 2 / span 1;
+         justify-self: stretch;
+         align-self: stretch;
+      }
+
+      &--6{
+         grid-column: 3 /span 2;
+         grid-row: 2 / span 1;
+         justify-self: stretch;
+         align-self: stretch;
+      }
+
+      &--7{
+         grid-column: 1 /span 3;
+         grid-row: 3 / span 1;
+         justify-self: stretch;
+         align-self: stretch;
+      }
+
+      &--8{
+         grid-column: 4 /span 1;
+         grid-row: 3 / span 1;
+         justify-self: stretch;
+         align-self: stretch;
+      }
+
+      &--img{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+         justify-items: stretch;
+         align-items: stretch;
+
+         img{
+            grid-column: 1 / span 1;
+            grid-row: 1 /span 1;
+
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            height: 100%;
+            min-width: 100%;
+            max-height: 100%;
+         }
+
+         .overlay{
+            grid-column: 1 / span 1;
+            grid-row: 1 /span 1;
+            z-index: 3;
+            background-color: rgba(77, 76, 76, 0.5);
+         }
+      }
+
+      &--btn{
+         background-color: $dBlue;
+         padding: 1rem;
+
+         @include Flex2;
+         flex-direction: column;
+
+         p{
+            @include Rub-500;
+            font-size: 2.4rem;
+            line-height: 150%;
+            text-align: center;
+            color: $white;
+            max-width: 16rem;
+            margin-bottom: 2rem;
+         }
+
+         a{
+            @include basicBtn2;
+         }
+      }
+   }
+
+}
+
+
+//BEING A MEMBER
+.beingMemberWrap{
+   width: 100%;
+   margin-bottom: 6rem;
+   padding: 10rem 0;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-image: url('../img/office1.png');
+
+
+   h2{
+      @include H2;
+      color: $white;
+      max-width: 90%;
+      margin: auto;
+      text-align: center;
+   }
+
+   h1{
+      @include H1;
+      color: $white;
+      max-width: 90%;
+      margin: auto;
+      text-align: center;
+   }
+
+   .beingMember{
+      @include Flex1;
+
+      .beingMemberBox{
+         margin-top: 6rem;
+         img{
+            display: block;
+            height: 5rem;
+            margin: auto;
+            margin-bottom: 2rem;
+         }
+
+         h3{
+            @include Lato-700;
+            font-size: 2.4rem;
+            line-height: 150%;
+            color: $white;
+            margin-bottom: 1rem;
+            text-align: center;
+         }
+
+         p{
+            @include Lato-400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            color: $white;
+            margin-bottom: 2rem;
+            text-align: center;
+
+            span{
+               @include Lato-400;
+               font-size: 1.8rem;
+               line-height: 150%;
+               color: $teal;
+            }
+         }
+
+         a{
+            display: block;
+            width: fit-content;
+            text-decoration: none;
+            @include Rub-400;
+            font-size: 1.6rem;
+            color: $white;
+            cursor: pointer;
+            @include Flex1;
+            margin: auto;
+
+            i{
+               transition: transform 0.5s ease;
+               font-size: 1rem;
+               margin-left: 1rem;
+            }
+      
+            &:hover{
+                  i{
+                     transform: translateX(10px);
+                  }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1300px){
+   //GALLERY
+   .galleryWrap{
+
+      //gallery grid
+      .gallery{
+         display: grid;
+         grid-template-columns: 360px 360px;
+         grid-column-gap: 2rem;
+         grid-template-rows: 340px 340px 340px 340px 340px;
+         grid-row-gap: 2rem;
+         justify-content: center;   
+      }
+
+      //gallery box
+      .galleryBox{
+         &--1{
+            grid-column: 1 /span 1;
+            grid-row: 1 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--2{
+            grid-column: 2 /span 1;
+            grid-row: 1 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--3{
+            grid-column: 1 /span 2;
+            grid-row: 2 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--4{
+            grid-column: 1 /span 1;
+            grid-row: 3 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--5{
+            grid-column: 2 /span 1;
+            grid-row: 3 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--6{
+            grid-column: 1 /span 1;
+            grid-row: 4 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--7{
+            grid-column: 2 /span 1;
+            grid-row: 4 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--8{
+            grid-column: 1 /span 2;
+            grid-row: 5 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+      }
+
+   }
+}
+
+@media screen and (max-width: 1200px){
+   .mycoIntro{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content max-content;
+      grid-row-gap: 4rem;
+   }
+
+
+   //BEING A MEMBER
+   .beingMemberWrap{
+      padding: 5rem 0;
+
+      .beingMember{
+         max-width: 700px;
+         .beingMemberBox{
+            width: 100%;
+            max-width: 25rem;
+            margin: auto;
+            margin-top: 6rem;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1024px){
+   .workingSpaceWrap{
+      .workingSpace{
+         grid-template-columns: 1fr;
+         grid-template-rows: max-content max-content;
+
+         &__left{
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+         }
+
+         &__right{
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 800px){
+   .featuresWrap{
+      .features{
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+   //GALLERY
+   .galleryWrap{
+
+      //gallery grid
+      .gallery{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-column-gap: 2rem;
+         grid-template-rows: 340px 340px 340px 340px 340px 340px 340px 340px;
+         grid-row-gap: 2rem;
+         justify-content: center;   
+      }
+
+      //gallery box
+      .galleryBox{
+         &--1{
+            grid-column: 1 /span 1;
+            grid-row: 1 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--2{
+            grid-column: 1 /span 1;
+            grid-row: 2 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--3{
+            grid-column: 1 /span 1;
+            grid-row: 3 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--4{
+            grid-column: 1 /span 1;
+            grid-row: 4 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--5{
+            grid-column: 1 /span 1;
+            grid-row: 5 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--6{
+            grid-column: 1 /span 1;
+            grid-row: 6 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--7{
+            grid-column: 1 /span 1;
+            grid-row: 7 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--8{
+            grid-column: 1 /span 1;
+            grid-row: 8 / span 1;
+            justify-self: stretch;
+            align-self: stretch;
+         }
+
+         &--btn{
+            a{
+               width: 100%;
+               max-width: 300px;
+               padding: 2rem 2rem;
+               text-align: center;
+            }
+         }
+      }
+
+   }
+}
+
+@media screen and (max-width: 700px){
+   .mycoIntro{
+      padding: 2rem;
+   }
+   //BEING A MEMBER
+   .beingMemberWrap{
+
+      .beingMember{
+         
+         .beingMemberBox{
+            margin-top: 6rem;
+            img{
+               display: block;
+               height: 5rem;
+               margin: auto;
+               margin-bottom: 2rem;
+            }
+
+            h3{
+               @include Lato-700;
+               font-size: 2.4rem;
+               line-height: 150%;
+               color: $white;
+               margin-bottom: 1rem;
+               text-align: center;
+            }
+
+            p{
+               @include Lato-400;
+               font-size: 1.8rem;
+               line-height: 150%;
+               color: $white;
+               margin-bottom: 2rem;
+               text-align: center;
+
+               span{
+                  @include Lato-400;
+                  font-size: 1.8rem;
+                  line-height: 150%;
+                  color: $teal;
+               }
+            }
+
+            a{
+               display: block;
+               width: fit-content;
+               text-decoration: none;
+               @include Rub-400;
+               font-size: 1.6rem;
+               color: $white;
+               cursor: pointer;
+               @include Flex1;
+               margin: auto;
+
+               i{
+                  transition: transform 0.5s ease;
+                  font-size: 1rem;
+                  margin-left: 1rem;
+               }
+         
+               &:hover{
+                     i{
+                        transform: translateX(10px);
+                     }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 500px){
+   .featuresWrap{
+      .features{
+         grid-template-columns: 1fr;
+         grid-row-gap: 3rem;
+      }
+   }
+}

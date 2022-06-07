@@ -1,0 +1,597 @@
+.serviceIntroWrap{
+   padding-top: 6rem;
+   margin-bottom: 6rem;
+   
+   .serviceIntro{
+      display: grid;
+      grid-template-columns: 1fr 470px;
+      grid-template-rows: max-content;
+      grid-column-gap: 2rem;
+
+      .serviceText{
+         max-width: 680px;
+         width: 100%;
+         
+         h1{
+            @include H4;
+         }
+
+         p{
+            @include P1;
+            line-height: 208%;
+
+            &:not(:last-child){
+               margin-bottom: 2rem;
+            }
+
+            a{
+               @include basicLink1;
+            }
+         }
+      }
+
+      .serviceBuy{
+         align-self: start;
+
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center center;
+
+         &--roa{
+            background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.2), rgba(44, 59, 88, 0.2)),
+                              url('../img/services/roa.png');
+         }
+      
+         &--dsa{
+            background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.2), rgba(44, 59, 88, 0.2)),
+                              url('../img/services/roa.png');
+         }
+      
+         &--vba{
+            background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.2), rgba(44, 59, 88, 0.2)),
+                              url('../img/services/roa.png');
+         }
+      
+         &--vbp{
+            background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.2), rgba(44, 59, 88, 0.2)),
+                              url('../img/services/roa.png');
+         }
+
+         &--vbaTas{
+            background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.2), rgba(44, 59, 88, 0.2)),
+                              url('../img/services/roa.png');
+         }
+
+         &--vbpTas{
+            background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.2), rgba(44, 59, 88, 0.2)),
+                              url('../img/services/roa.png');
+         }
+
+         &--vbpWeb{
+            background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.2), rgba(44, 59, 88, 0.2)),
+                              url('../img/services/roa.png');
+         }
+
+         &--vbpLegal{
+            background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.2), rgba(44, 59, 88, 0.2)),
+                              url('../img/services/roa.png');
+         }
+
+         &--tas{
+            background-image: linear-gradient(0deg, rgba(44, 59, 88, 0.2), rgba(44, 59, 88, 0.2)),
+                              url('../img/services/roa.png');
+         }
+
+         .serviceBuyTop{
+            padding: 6rem 3.5rem;
+
+            h2{
+               @include Rob-500;
+               color: $white;
+               font-size: 3.2rem;
+               line-height: 160%;
+            }
+         }
+
+         .serviceBuyAngle{
+            border-style: solid;
+            border-width: 64px 0 0 470px;
+            border-color: transparent transparent transparent $teal4;
+         }
+
+         .serviceBuyPrice{
+            padding: 0 3.5rem 3.5rem 3.5rem;
+            background-color: $teal4;
+
+            @include Flex1;
+            align-content: center;
+
+            // price 
+            &__price{
+               width: 100%;
+               @include Rob-700;
+               color: $white;
+               font-size: 4.4rem;
+               line-height: 160%;
+
+               span{
+                  @include Rob-500;
+                  font-size: 1.6rem;
+               }
+            }
+
+            //Only Available
+            &__onlyAvailable{
+               @include Rub-500;
+               font-size: 1.6rem;
+               line-height: 160%;
+               color: $white;
+               border: 1px solid $white;
+               border-radius: 4px;
+               padding: 1rem 3rem;
+               width: fit-content;
+            } 
+
+            //select - period
+            &__select{
+               width: 18rem;
+
+               select{
+                  font-size: 1.6rem;
+                  @include Rub-500;
+                  color: $white;
+                  line-height: 160%;
+
+                  padding: 1.2rem 1.4rem 1.1rem .8rem;
+                  width: 100%;
+
+                  box-sizing: border-box;
+                  margin: 0 auto;
+                  border: 1px solid $white !important; 
+                  box-shadow: none;
+                  border-radius: 4px;
+                  outline: none;
+                  -moz-appearance: none;
+                  -webkit-appearance: none;
+                  appearance: none;
+
+                  background-color: transparent;
+                  background-image: url('../img/downArrow2.png');
+                  background-repeat: no-repeat, repeat;
+                  background-position: right .7em top 50%, 0 0;
+                  background-size: 1.2rem auto, 100%;
+
+                  margin: 0 !important;
+                  
+                  &:focus{
+                     cursor: pointer;
+                     border: 0,6px solid $white;
+                  }
+               }
+
+               option{
+                     font-size: 1.6rem;
+                     @include Rub-500;
+                     color: $black;
+               }
+            }
+
+            // buy now btn
+            &__buyBtn{
+               @include basicBtn4;
+               @include Rob-500;
+               font-size: 2rem;
+               padding: 1.5rem 4.5rem;
+               border-radius: 4px;
+
+               &:hover{
+                  background-color: $teal;
+               }
+            } 
+         }
+
+         //postal
+         .serviceBuyPostal{
+            @include Flex1;
+            background-color: $dBlue;
+            padding: 1rem 2rem;
+
+            p{
+               @include Rob-500;
+               font-size: 1.8rem;
+               line-height: 120%;
+               color: $white;
+            }
+
+            span{
+               @include Rob-700;
+               font-size: 1.8rem;
+            }
+
+            .tooltip{
+               border: 1px solid $white;
+               padding: 0.5rem 1.5rem;
+               border-radius: 4px;
+         
+            }
+         }
+      } 
+   }
+}
+
+//FEATURES
+.featuresWrapper{
+   padding: 6rem 0;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   
+   &--regOfficeAddress{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/features-banners/roa.png');
+   }
+   &--directorServAddress{ 
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/features-banners/dsa.png');
+   }
+   &--VBA{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/features-banners/vba.png');
+   }
+   &--VBP{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/features-banners/vbp.png');
+   }
+   &--TAS{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.7), rgba(242, 246, 251, 0.7)),
+                        url('../img/features-banners/tas.png');
+   }
+   &--teleAnswering{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)), 
+                        url('../img/features-banners/tas.png');
+   }
+   &--VBA-TAS{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/features-banners/vba-tas.png');
+   }
+   &--VBP-TAS{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/features-banners/vbp-tas.png');
+   }
+   &--VBP-web{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/features-banners/vbp-web.png');
+   }
+   &--VBP-legal{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/features-banners/vbp-legal.png');
+   }
+   &--freeCompany{
+      background-image:linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/features-banners/vbp-tas.png');
+   }
+
+   .features{
+      @include Flex1;
+      align-items: flex-start;
+   }
+
+   .featuresList{
+      width: 32%;
+
+      &__h{
+         @include H4;
+         font-size: 3.2rem;
+      }
+   }
+
+   .feature{
+      @include Flex1;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      min-height: 5rem;
+      margin-bottom: 2rem;
+
+      &--last{
+         margin-bottom: 0;
+      }
+
+      &__icon{
+         width: 3rem !important;
+         height: 3rem !important;
+         margin-right: 2rem;
+      }
+
+      &__description{
+         @include Rob-400;
+         font-size: 1.6rem;
+         line-height: 160%;
+         color: $black;
+      }
+   }
+
+} 
+
+//FAQs
+.ServicesFAQsWrapper{
+   padding: 6rem 10%;
+
+   .ServicesFAQsInner{
+      min-height: 820px;
+      max-width: 90rem;
+      background-image: url('../img/locationPin.svg');
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      background-size: 70%;
+      background-position: 0 80px;
+
+      &__h1{
+         @include H3;
+      }
+
+      &__p{
+         @include P1;
+         width: fit-content;
+         max-width: 90%;
+         margin: auto;
+         margin-bottom: 6rem;
+         text-align: center;
+      }
+
+   }
+
+   .faqS{
+      max-width: 70rem;
+      margin: auto;
+      border-bottom: 1px solid #E5E5E5;
+   }
+
+   .faq{
+   
+      dt{
+         @include Flex1;
+         justify-content: flex-start;
+         flex-wrap: nowrap;
+   
+         @include Rob-500;
+         font-size: 1.8rem;
+         color: $dBlue;
+   
+         border-top: 1px solid #E5E5E5;
+   
+         padding: 2rem 0;
+   
+         &:hover{
+            cursor: pointer;
+         }
+         
+   
+         i{
+            color: $teal;
+            font-size: 1.7rem;
+            margin-right: 2rem;
+   
+            &:hover{
+               cursor: pointer;
+               color: $dBlue;
+            }
+         }
+   
+         .fa-minus{
+            display: none;
+         }
+      }
+      dd{
+         display: none;
+      }
+   
+      &--open{
+         dt{
+            margin-bottom: 1rem;
+   
+            .fa-minus{
+               display: block;
+            }
+   
+            .fa-plus{
+               display: none;
+            }
+         }
+         dd{
+            display: block;
+            @include P1;
+            color: $black;
+            line-height: 200%;
+            padding-left: 3.8rem;
+            padding-bottom: 3rem;
+            @include slideD-10px;
+
+            a{
+               @include basicLink1;
+            }
+         }
+      }
+   }
+}
+
+//ADDITIONAL SERVICES
+.additionalServicesWrapper{
+   padding: 6rem 0;
+   
+   &__h1{
+      @include H3;
+   } 
+
+}
+
+.additionalServicesDropDown{
+      position: relative;
+      width: 30rem;
+      margin: auto;
+      margin-top: 3rem;
+
+      &__btn{
+         width: 30rem;
+         margin: auto;
+
+         @include Rob-400;
+         font-size: 2rem;
+         line-height: 100%;
+         color: $white;
+         text-align: center;
+
+         padding: 1.5rem 2rem;
+         background-color: $teal;
+
+         i{
+            font-size: 2.1rem;
+            margin-left: 2rem;
+         }
+
+         &:hover{
+            cursor: pointer;
+         }
+
+      }
+
+      &__dropDown{
+         z-index: 10;
+         position: absolute;
+         width: 30rem;
+         margin: 0.5rem auto;
+         padding: 1rem 0;
+
+         list-style: none;
+         background-color: $white;
+         box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.15);
+         
+
+         li{
+            padding: 2rem 1rem;
+            transition: all 0.5s ease;
+
+            a{
+               text-decoration: none;
+               @include Rob-400;
+               font-size: 1.8rem;
+               color: $black;
+            }
+
+            &:hover{
+               background-color: #EFEFEF;
+               cursor: pointer;
+
+               a{
+                  color: $teal;
+               }
+            }
+         }
+
+         &--open{
+            display: block;
+            @include slideD-10px;
+         }
+
+         &--close{
+            display: none;
+         }
+      }
+}
+
+
+@media screen and (max-width: 1224px){
+   .serviceIntroWrap{      
+      .serviceIntro{
+         display: grid;
+         grid-template-columns: 1fr max-content;
+   
+         .serviceBuy{
+            width: 400px;
+
+            .serviceBuyTop{
+               padding: 4rem 2rem;
+   
+               h2{
+                  font-size: 3.3rem;
+               }
+            }
+   
+            .serviceBuyAngle{
+               border-width: 50px 0 0 400px;
+            }
+   
+            .serviceBuyPrice{
+               padding: 0 2rem 2rem 2rem;
+
+               // price 
+               &__price{
+                  font-size: 3.2rem;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1096px){
+   .serviceIntroWrap{      
+      .serviceIntro{
+         grid-template-columns: 1fr;
+         grid-template-rows: max-content max-content;
+         grid-row-gap: 4rem;
+         justify-items: center;
+
+         .serviceText{
+            max-width: 100%;
+            width: 100%;
+         }
+      }
+   }
+
+   .featuresWrapper{
+      padding: 6rem 0 1rem;
+   
+      .features{
+         display: block;
+      }
+   
+      .featuresList{
+         width: 100%;
+         max-width: 50rem;
+         margin: auto;
+         margin-bottom: 5rem;
+
+      }
+   }
+}
+
+
+@media screen and (max-width: 400px){
+   .serviceIntroWrap{      
+      .serviceIntro{
+   
+         .serviceBuy{
+            width: 280px;
+            
+            .serviceBuyAngle{
+               border-width: 40px 0 0 280px;
+            }
+   
+            .serviceBuyPrice{
+               justify-content: center;
+               // price 
+               &__price{
+                  text-align: center;
+                  margin-bottom: 1rem;
+               }
+
+               // buy now btn
+               &__buyBtn{
+                  margin-top: 2rem;
+               } 
+            }
+         }
+      }
+   }
+}

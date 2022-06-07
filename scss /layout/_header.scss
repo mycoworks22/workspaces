@@ -1,0 +1,326 @@
+.header{
+   width: 100%;
+   
+   display: grid;
+   grid-template-columns: 1fr 1200px 1fr;
+   grid-template-rows: max-content 60px max-content;
+}
+
+//slider 
+.headerSlider{
+   grid-column: 1 / span 3;
+   grid-row: 1 / span 2;
+   justify-self: stretch;
+   align-self: stretch;
+   z-index: 5;
+
+   width: 100%;
+   display: flex;
+
+   // slide 
+   .headerSlide{
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+
+      height: 70rem;
+      min-height: 70rem;
+      max-height: fit-content;
+
+      padding: 4rem 0 10rem 0; //bottom padding is what we want as padding + the height of the controls
+
+      @include Flex1;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      &--1{
+         background-image:   linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                              url('../img/headers/home1.png');
+      }
+
+      &--2{
+         background-image:   linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                              url('../img/headers/home2.jpg');
+      }
+
+      &--3{
+         background-image:   linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                              url('../img/headers/home3.jpg');
+      }
+
+   }
+
+   //slide content
+   .headerSlideContent{
+      &__title{
+         @include Rub-500;
+         color: $white;
+         font-size: 7.4rem;
+         line-height: 130%;
+
+         border-left: 4px solid $teal;
+         padding-left: 2rem;
+
+         margin-bottom: 4rem;
+      }
+
+      &__btn{
+         @include arrowBtn1;
+      }
+   }
+}
+
+//slider controls
+.headerSliderControls{
+   grid-column: 2 / span 1;
+   grid-row: 2 / span 1;
+   justify-self: start;
+   align-self: stretch !important;
+   z-index: 10;
+
+   width: 18rem;
+   background-color: $white;
+   @include Flex1;
+   padding: 1rem 3rem;
+
+   i{
+      line-height: 100%;
+      font-size: 2rem;
+      color: $black;
+      cursor: pointer;
+      transition: color 0.5s ease;
+
+      &:hover{
+         color: $teal;
+      }
+   }
+}
+
+//basic info
+.headerBasicInfo{
+   grid-column: 2 / span 1;
+   grid-row: 2 / span 2;
+   justify-self: end;
+   align-self: start;
+   z-index: 11;
+
+   padding: 1rem 1rem;
+
+   height: 12rem;
+   width: fit-content;
+
+   background-color: $teal;
+
+   @include Flex1;
+
+   &__time{
+      @include Flex1;
+      margin: 0 2rem;
+
+      i{
+         font-size: 3.8rem;
+         color: $white;
+         margin-right: 2rem;
+      }
+
+      p{
+         @include Rub-500;
+         font-size: 2rem;
+         line-height: 120%;
+         color: $white;
+      }
+   }
+
+   &__phone{
+      @include Flex1;
+      margin: 0 2rem;
+
+      i{
+         font-size: 3rem;
+         color: $white;
+         margin-right: 2rem;
+      }
+
+      p{
+         @include Rub-400;
+         font-size: 2rem;
+         line-height: 120%;
+         color: $white;
+
+         span{
+            @include Rub-500;
+            font-size: 2rem;
+         }
+      }
+   }
+}
+
+
+@media screen and (max-width: 1450px){
+   //slider 
+   .headerSlider{
+
+      // slide 
+      .headerSlide{
+         width: 100%;
+         min-width: 100%;
+         max-width: 100%;
+
+         height: 57rem;
+         min-height: 57rem;
+         max-height: fit-content;
+
+         padding: 4rem 0 10rem 0; //bottom padding is what we want as padding + the height of the controls
+
+      }
+
+      //slide content
+      .headerSlideContent{
+         &__title{
+            @include Rub-500;
+            color: $white;
+            font-size: 5rem;
+            line-height: 130%;
+
+            border-left: 4px solid $teal;
+            padding-left: 2rem;
+
+            margin-bottom: 4rem;
+         }
+
+         &__btn{
+            @include arrowBtn1;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1334px){
+   .header{
+      display: grid;
+      grid-template-columns: 1fr 90% 1fr;
+      grid-template-rows: max-content 60px max-content;
+   }
+}
+
+@media screen and (max-width: 800px){
+   //basic info
+   .headerBasicInfo{
+      padding: 2rem 2rem;
+
+      height: fit-content;
+      width: fit-content;
+
+      @include Flex1;
+      flex-direction: column;
+
+      &__time{
+         margin: 0 0 2rem 0;
+      }
+
+      &__phone{
+         margin: 0 0 0 0;
+      }
+   }
+}
+
+@media screen and (max-width: 600px){
+   .header{
+      display: grid;
+      grid-template-columns: 1fr 90% 1fr;
+      grid-template-rows: max-content max-content max-content;
+   }
+
+   .headerSlider{
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 1;
+      justify-self: stretch;
+      align-self: stretch;
+
+      .headerSlide{
+         padding: 7rem 0 7rem 0;
+         height: fit-content;
+         min-height: fit-content;
+         max-height: fit-content;
+      }
+
+      .headerSlideContent{
+         &__title{
+            @include Rub-500;
+            color: $white;
+            font-size: 4rem;
+            line-height: 130%;
+   
+            border-left: 4px solid $teal;
+            padding-left: 2rem;
+   
+            margin-bottom: 4rem;
+         }
+   
+         &__btn{
+            @include arrowBtn1;
+         }
+      }
+   }
+
+   .headerSliderControls{
+      grid-column: 1 / span 3;
+      grid-row: 2 / span 1;
+      justify-self: stretch;
+      align-self: stretch;
+      width: 100%;
+      padding: 2rem 3rem;
+   }
+
+   .headerBasicInfo{
+      grid-column: 1 / span 3;
+      grid-row: 3 / span 1;
+      justify-self: stretch;
+      align-self: stretch;
+      width: 100%;
+      padding: 2rem 3rem;
+
+      &__time{
+         @include Flex1;
+         margin: 0 0 2rem 0;
+   
+         i{
+            font-size: 2rem;
+            color: $white;
+            margin-right: 1rem;
+         }
+   
+         p{
+            @include Rub-500;
+            font-size: 1.8rem;
+            line-height: 120%;
+            color: $white;
+         }
+      }
+
+      &__phone{
+         @include Flex1;
+         margin: 0 0 2rem 0;
+   
+         i{
+            font-size: 2rem;
+            color: $white;
+            margin-right: 1rem;
+         }
+   
+         p{
+            @include Rub-500;
+            font-size: 1.8rem;
+            line-height: 120%;
+            color: $white;
+
+            span{
+               @include Rub-500;
+               font-size: 1.8rem;
+            }
+         }
+      }
+   }
+}

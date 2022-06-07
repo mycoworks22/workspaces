@@ -1,0 +1,407 @@
+.pricingHeading{  
+
+   &__h1{
+      @include H3; 
+      margin-bottom: 6rem;
+   } 
+
+   &__btns{
+      display: flex;
+      width: fit-content;
+      margin: auto;
+      margin-bottom: 3rem;
+   }
+
+   .pricingBtns{
+      text-decoration: none;
+      @include Rob-500;
+      font-size: 1.8rem;
+      padding: 2rem 4rem;
+      transition: all 0.5s ease;
+      text-align: center;
+
+      //active btn
+      &--active{
+         background-color: $teal;
+         color: $white;
+         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+      }
+      // off btn
+      &--off{
+         background-color: $teal2;
+         color: $teal;
+      }
+      //left
+      &--1{
+      
+      }
+      //right
+      &--2{
+      
+      }
+      &:hover{
+         cursor: pointer;
+      }
+
+   }
+
+   &__select{
+      select{
+         display: block;
+         font-size: 1.6rem;
+         @include Rob-500;
+         color: $black;
+         line-height: 160%;
+         padding: .6em 1.4em .5em .8em;
+         width: 18rem;
+         max-width: 90%;
+         box-sizing: border-box;
+         margin: 0 auto;
+         border: 2px solid $black; 
+         box-shadow: none;
+         border-radius: 0px;
+         outline: none;
+         -moz-appearance: none;
+         -webkit-appearance: none;
+         appearance: none;
+         background-color: $grey3;
+         background-image: url('../img/angle-down-solid.svg'),
+                        linear-gradient(to bottom, $grey3 100%,$grey3 100%);
+         background-repeat: no-repeat, repeat;
+         background-position: right .7em top 50%, 0 0;
+         background-size: 1.2rem auto, 100%;
+
+         &:focus{
+            border: 2px solid $teal;
+         }
+      }
+
+      option{
+         font-size: 1.8rem;
+         @include Rob-500;
+         color: $black;
+      }
+   }
+}
+
+.service{
+   margin-top: 4.2rem;
+   display: grid;
+   grid-template-rows: max-content 5rem max-content max-content;
+   grid-template-columns: 1fr;
+
+   //most popular
+   &--mostPop{
+      margin-top: 0;
+      background-color: $teal;
+   }
+   //1 year only 
+   //most popular
+   &--yearly{
+      margin-top: 0;
+   }
+
+   //top 
+   &__top{
+      padding: 0px;
+      background-color: $grey3;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1;
+
+      &--popular{
+         background-color: $teal3;
+      }
+
+      .director-address{
+         width: fit-content;
+         margin: 2rem auto 2rem; 
+         
+         label{
+            @include Rob-700;
+            color: $dBlue;
+            line-height: 100%;
+            font-size: 1.6rem;
+            margin-left: 0.5rem;
+         }
+      }
+      
+
+      #director-check{
+         transform: translateY(-0.05rem);
+         font-size: 5rem;            
+      }
+   }
+
+   &__h{
+      @include Rob-700;
+      font-size: 1.8rem;
+      line-height: 160%;
+      text-align: center;
+      color: $dBlue;
+      width: fit-content;
+      margin: auto;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+
+      &--popular{
+         color: $white;
+      }
+   }
+
+   &__price{
+      color: $teal;
+      font-size: 5rem;
+      @include Rob-700;
+      width: fit-content;
+      margin: auto;
+
+      span{
+         color: $teal;
+         font-size: 3rem;
+         @include Rob-700;
+         padding-right: 2px;
+      }
+
+      &--popular{
+         color: $white;
+
+         span{
+            color: $white;
+         }
+      }
+
+      .serviceVat{
+         color:  #A6A4A4;
+         font-size: 1.5rem;
+         @include Rob-700;
+         margin-left: 0.6rem;
+
+         &--popular{
+            color: $white;
+         }
+      }
+   }
+
+   &__note{
+      @include Rob-700;
+      color: $dBlue;
+      line-height: 100%;
+      font-size: 1.6rem;
+      width: fit-content;
+      text-align: center;
+      margin: 2rem auto;
+
+      &--popular{
+         color: $white;
+      }
+   }
+
+   &__learnMore{
+      @include basicBtn1;
+      font-size: 1.6rem;
+      padding: 1rem 1.8rem;
+      margin: 2rem auto;
+
+      &--popular{
+         @include basicBtn3;
+         font-size: 1.6rem;
+         padding: 1rem 1.8rem;
+         margin: 2rem auto;
+      }
+   }
+
+   &__mostPopular{
+      height: 4rem;
+      @include Flex1;
+      margin-bottom: 0rem;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      background-color: $teal;
+
+      p{
+         @include Rob-500;
+         color: $white;
+         font-size: 1.9rem;
+         width: fit-content;
+         margin: auto;
+      }
+   }
+
+   &__yearly{
+      height: 4rem;
+      @include Flex1;
+      margin-bottom: 0rem;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      background-color: $teal;
+
+      p{
+         @include Rob-500;
+         color: $white;
+         font-size: 1.9rem;
+         width: fit-content;
+         margin: auto;
+      }
+   }
+
+   //wave
+   &__wave{
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 1;
+      background-color: $grey3;
+      background-image: url('../img/curve.png');
+      background-size: cover !important;
+      background-repeat: no-repeat;
+      background-position:50% 2px;
+
+      &--popular{
+         background-color: $teal3;
+         background-image: url('../img/curve2.png');
+      }
+   }
+
+   // //content
+   &__content{
+      grid-row: 3 / span 1;
+      grid-column: 1 / span 1;
+      margin-top: 0rem;
+      padding: 10px 5px;
+      padding-right: 1rem;
+
+      width: fit-content;
+      margin: auto;
+
+      &--popular{
+         ul{
+            .tooltip{
+                  color: $white;
+            }
+            i{
+                  color: $white !important;
+            }
+         }
+      }
+
+      ul{
+         list-style: none;
+         width: fit-content;
+         max-width: 100% !important;
+         margin: auto;
+
+         li{
+            @include Rob-400;
+            font-size: 1.5rem;
+            color: $black;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+         }
+
+         i{
+            font-size: 1rem;
+            color: $teal;
+            margin-right: 1rem;
+         }
+      } 
+
+      #regOffAdd1{
+         width: 100%;
+      }
+
+      #regOffAdd2{
+         width: 100%;
+      }
+
+   }
+
+   // //buttons
+   &__buttons{
+      grid-row: 4 / span 1;
+      grid-column: 1 / span 1; 
+
+      padding-bottom: 2rem;
+      margin-top: 4rem;
+
+   
+      .selectPlan{
+         @include basicBtn4;
+         margin: auto;
+         margin-bottom: 1rem;
+      }
+   }
+
+}
+
+.pricingIndividual{
+   padding: 4rem 0 0 0;
+   @include Flex1;
+   align-items: flex-start;
+
+   &__col{
+      width: 24%;
+      box-sizing: border-box;
+      box-shadow: 0px 10px 30px rgba(131, 131, 131, 0.15);
+      box-sizing: border-box;
+   }
+}
+
+.pricingCombined{
+   padding: 4rem 0 0 0;
+   @include Flex1;
+   align-items: flex-start;
+
+   &__col{
+      width: 24%;
+      box-sizing: border-box;
+      box-shadow: 0px 10px 30px rgba(131, 131, 131, 0.15);
+      box-sizing: border-box;
+   }
+}
+
+//MEDIA Q
+@media screen and (max-width: 1236px){
+   .service{
+      grid-template-rows: max-content 9rem max-content max-content;
+   }
+
+   .pricingIndividual{   
+      &__col{
+         width: 48%;
+      }
+   }
+   
+   .pricingCombined{   
+      &__col{
+         width: 48%;
+      }
+   }
+}
+
+@media screen and (max-width: 600px){
+
+   .pricingIndividual{   
+      &__col{
+         width: 100%;
+         margin: 2rem auto;
+      }
+   }
+   
+   .pricingCombined{   
+      &__col{
+         width: 90%;
+         margin: 2rem auto;
+      }
+   }
+}
+
+@media screen and (max-width: 500px){
+   .pricingHeading{  
+
+      .pricingBtns{
+         padding: 1rem 2rem;
+      }
+   }
+}

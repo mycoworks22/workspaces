@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<lang="en">
+
+<head> 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="format-detection" content="telephone=no">
+
+   <title>LOCATIONS | MYCO WORKSPACE</title>
+
+
+   <!--STYLE SHEET-->
+   <link rel="stylesheet" href="css/main.css">
+   <!-- FONT AWESOME  -->
+   <script src="https://kit.fontawesome.com/be3a5a4e18.js" crossorigin="anonymous"></script>
+   <!-- J QUERY  -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <!-- JS  -->
+   <script src="js/dropdowns.js" defer></script>
+   <script src="js/burger.js" defer></script>
+   <script src="js/modals.js" defer></script>
+   
+</head>
+<body>
+   <!-- TOP NAV  -->
+   <div class="topNavWrap">
+      <div class="topNav row90">
+
+         <!-- left  -->
+         <div class="topNav__left">
+            <!-- phone  -->
+            <div class="topNavPhone">
+               <i class="fas fa-phone-alt"></i>
+               <p>
+                  020 7183 3787
+               </p>
+            </div>
+         </div>
+
+         <!-- right  -->
+         <div class="topNav__right">
+            <!-- 10% off  -->
+            <button class="topNav10">Get 10% Off</button>
+            <!-- cart  -->
+            <div class="topNavCart">
+               <a href="#">
+                  <i class="fas fa-shopping-cart"></i>
+               </a>
+            </div>
+            <!-- divide  -->
+            <div class="topNavDivide">
+
+            </div>
+            <!-- social links  -->
+            <div class="topNavSocials">
+               <!-- twiter  -->
+               <a href="https://twitter.com/registered_uk" class="topNavSocials__link topNavSocials__link--tw" target="_blank">
+                  <i class="fab fa-twitter"></i>
+               </a>
+               <!-- facebook  -->
+               <a href="https://www.facebook.com/MyCompany.Workspace" class="topNavSocials__link topNavSocials__link--f" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+               </a>
+               <!-- linked in  -->
+               <a href="https://www.linkedin.com/company/registered-office-uk-ltd/" class="topNavSocials__link topNavSocials__link--in" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+               </a>
+               <!-- instagram  -->
+               <a href="https://www.instagram.com/myco_workspace/" class="topNavSocials__link topNavSocials__link--inst" target="_blank">
+                  <i class="fab fa-instagram"></i>
+               </a>
+               <!-- youtube  -->
+               <a href="https://www.youtube.com/channel/UCta11jQVd3gugZVu-da8bjQ?view_as=subscriber" class="topNavSocials__link topNavSocials__link--yt" target="_blank">
+                  <i class="fab fa-youtube"></i>
+               </a>
+            </div>
+         </div>
+
+      </div>
+   </div>
+   <!-- top nav end  -->
+
+
+   <!-- MAIN NAV  -->
+   <div class="mainNavWrap">
+      <div class="mainNav row90">
+
+         <!-- logo  -->
+         <div class="mainNavLogo">
+            <a href="index.html">
+               <img src="img/logo-dark.svg" alt="">
+            </a>
+         </div>
+
+         <!-- main nav right  -->
+         <div class="mainNav__right">
+            <!-- main navigation  -->
+            <ul class="navLinks">
+               <li class="navLinks__link">
+                  <a class="activeLink" href="index.html">Home</a>
+               </li>
+               <li class="navLinks__link">
+                  <a href="ourOffice.html">Our Office</a>
+               </li>
+               <li class="navLinks__link">
+                  <a href="virtualTour.html">Virtual Tour</a>
+               </li>
+
+               <!-- Workspaces drop down  -->
+               <li class="navLinks__link dropDown-btn" id="workspace-btn">
+                  <a href="#">Workspaces <i class="fas fa-chevron-down" id="workspace-arrow"></i></a>
+
+                  <ul class="dropDown closeDropDown" id="workspace-dropDown">
+                     <li><a href="hotDesk.html">Hot Desks</a></li>
+                     <li><a href="meetingRooms.html">Meeting Rooms</a></li>
+                     <li><a href="businessLounge.html">Business Lounge</a></li>
+                  </ul>
+
+               </li>
+
+               <!-- ther Services Drop down  -->
+               <li class="navLinks__link dropDown-btn-services" id="otherServ-btn">
+                  <a href="#">Other Services <i class="fas fa-chevron-down" id="otherServ-arrow"></i></a>
+
+                  <ul class="servicesDropDown closeDropDown" id="otherServ-dropDown">
+
+                     <ul>
+                        <li>Address Services</li>
+                        <li><a href="roa.html">Registered Office Address</a></li>
+                        <li><a href="dsa.html">Director Service Address</a></li>
+                        <li><a href="vba.html">Virtual Business Address</a></li>
+                        <li><a href="vbp.html">Virtual Business Plus</a></li>
+                     </ul>
+
+                     <ul>
+                        <li>Combined Services</li>
+                        <li><a href="vbaTas.html">Virtual Business Address +
+                           Telephone Answering Service</a></li>
+                        <li><a href="vbpTas.html">Virtual Business Plus +
+                           Telephone Answering Service</a></li>
+                        <li><a href="vbpWeb.html">Virtual Business Plus +
+                           Website & Email Hosting</a></li>
+                        <li><a href="vbpLegal.html">Virtual Business Plus +
+                           Legal Document Pack</a></li>
+                     </ul>
+
+                     <ul>
+                        <li>Business Call Answering</li>
+                        <li><a href="tas.html">Telephone Answering Service</a></li>
+                     </ul>
+
+                     <ul>
+                        <li>Company Formations</li>
+                        <li><a href="companyF.html">Free Limited Company Formation</a></li>
+                     </ul>
+                     
+                  </ul>
+               </li>
+               
+               <li class="navLinks__link">
+                  <a href="pricing.html">Pricing</a>
+               </li>
+
+               <li class="navLinks__link">
+                  <a href="contact.html">Contact Us</a>
+               </li>
+            </ul>
+
+            <!-- log in btn  -->
+            <div class="navLogIn">
+               <button>
+                  Log In
+               </button>
+            </div>
+
+            <!-- burger   -->
+            <div class="navBurger" id="openBurger">
+               <div class="burgerLine burgerLine--1"></div>
+                  <div class="burgerLine burgerLine--2"></div>
+               <div class="burgerLine burgerLine--3"></div>
+            </div>
+
+            <!-- burger menu  --> 
+            <div class="burgerMenu" id="burgerMenu">
+               <!-- top  -->
+               <div class="burgerMenu__top row90">
+                  <img src="img/logo-dark.svg" alt="">
+                  <i class="fas fa-arrow-right" id="closeBurger"></i>
+               </div>
+
+               <!-- nav  -->
+               <nav class="burgerMenu__nav row90">
+                  <ul>
+                     
+                     <li class="burgerLink burgerLink--hidden burgerLink--active"><a href="index.html">Home</a></li>
+                     <li class="burgerLink"><a href="about.html">About Us</a></li>
+                     <li class="burgerLink"><a href="partners.html">Partners</a></li>
+                     <li class="burgerLink burgerLink--hidden"><a href="ourOffice.html">Our Office</a></li>
+                     <li class="burgerLink burgerLink--hidden"><a href="virtualTour.html">Virtual Tour</a></li>
+                  
+                     <!-- workspaces  -->
+                     <li class="burgerLink burgerLink--hidden burgerDropDownBtn1">
+                        <a href="#">Workspaces <i class="fas fa-chevron-down" id="workspace-arrow2"></i></a>
+
+                        <ul class="burgerDropDown burgerDropDown--1">
+                           <li class="burgerDropDown__link"><a href="hotDesk.html">Hot Desks</a></li>
+                           <li class="burgerDropDown__link"><a href="meetingRooms.html">Meeting Rooms</a></li>
+                           <li class="burgerDropDown__link"><a href="businessLounge.html">Business Lounge</a></li>
+                        </ul>
+                     </li>
+
+                     <!-- services  -->
+                     <li class="burgerLink burgerLink--hidden burgerDropDownBtn2">
+                        <a href="#">Services <i class="fas fa-chevron-down" id="services-arrow2"></i></a>
+
+                        <ul class="burgerDropDown burgerDropDown--2">
+                           <li class="burgerDropDown__link"><a href="roa.html">Registered Office Address</a></li>
+                           <li class="burgerDropDown__link"><a href="dsa.html">Director Service Address</a></li>
+                           <li class="burgerDropDown__link"><a href="vba.html">Virtual Business Address</a></li>
+                           <li class="burgerDropDown__link"><a href="vbp.html">Virtual Business Plus</a></li>
+
+                           <li class="burgerDropDown__link">
+                              <a href="vbaTas.html">Virtual Business Address +
+                              Telephone Answering Service</a>
+                           </li>
+                           <li class="burgerDropDown__link">
+                              <a href="vbpTas.html">Virtual Business Plus +
+                              Telephone Answering Service</a>
+                           </li>
+                           <li class="burgerDropDown__link">
+                              <a href="vbpWeb.html">Virtual Business Plus +
+                              Website & Email Hosting</a>
+                           </li>
+                           <li class="burgerDropDown__link">
+                              <a href="vbpLegal.html">Virtual Business Plus +
+                              Legal Document Pack</a>
+                           </li>
+
+                           <li class="burgerDropDown__link"><a href="tas.html">Telephone Answering Service</a></li>
+                           <li class="burgerDropDown__link"><a href="companyF.html">Free Limited Company Formation</a></li>
+                        </ul>
+                     </li>
+                     
+
+                     <li class="burgerLink"><a href="#">Blog</a></li>
+                     <li class="burgerLink"><a href="locations.html">Locations</a></li>
+                     <li class="burgerLink burgerLink--hidden"><a href="pricing.html">Pricing</a></li>
+                     <li class="burgerLink"><a href="faq.html">FAQs</a></li>
+                     <li class="burgerLink"><a href="app.html">Our App</a></li>
+                     <li class="burgerLink burgerLink--hidden"><a href="contact.html">Contact Us</a></li>
+                  </ul>
+               </nav>
+               
+            </div>
+
+         </div>
+
+      </div>
+   </div>
+   <!-- main nav end  -->
+
+
+
+   <!-- HEADER  -->
+   <div class="header2 header2--ourLocations">
+      <div class="header2Content row90">
+         <h1>
+            Our </br>
+            Locations 
+         </h1>
+      </div>
+   </div>
+   <!-- header end  -->
+
+
+
+   <!-- OUR LOCATIONS  -->
+   <div class="locationsWrapper ">
+      <h1 class="locationsWrapper__h1">
+         Discover Our Prominent City Centre Locations
+      </h1>
+
+      <!-- LONDON LOCATIONS  -->
+      <div class="locationsSection locationsSection--London row90">
+         <h2 class="locationsSection__h">
+            London 
+         </h2>
+
+         <p class="locationsSection__p">
+            We have four offices located in prime locations in the vibrant, beating heart of Central London to help boost your business profile and increase confidence in your brand. We have chosen prestigious London addresses in the West End, the City and the Strand –perfect for startups, freelancers, entrepreneurs and SMEs eager to impress clients and suppliers.
+         </p>
+
+         <!-- london west end 2  -->
+         <div class="locationCard locationCard--westEnd2">
+            <div class="locationCard__top locationCard__top--westEnd2">
+               <h3 class="locationCard__location">
+                  London</br> (West End) Office
+               </h3>
+               <img src="img/pin-teal.svg" alt="" class="locationCard__pin">
+               <p class="locationCard__address">
+                  167-169 Great Portland Street, </br>
+                  5th Floor, London, W1W 5PE
+               </p>
+               <div class="locationCard__curve">
+                  <img src="img/down-curve.png" alt="" >
+               </div>
+               
+            </div>
+            <div class="locationCard__bottom">
+               <button id="westEnd2ViewMap">
+                  <img src="img/pin-white.svg" alt="">
+                  View Map 
+               </button>
+            </div>
+         </div>
+         
+         <!-- london west end  -->
+         <div class="locationCard locationCard--westEnd1">
+            <div class="locationCard__top locationCard__top--westEnd1"> 
+               <h3 class="locationCard__location">
+                  London</br> (West End) Office
+               </h3>
+               <img src="img/pin-teal.svg" alt="" class="locationCard__pin">
+               <p class="locationCard__address">
+                  85 Great Portland Street </br> London, W1W 7LT
+               </p>
+               <div class="locationCard__curve">
+                  <img src="img/down-curve.png" alt="" >
+               </div>
+               
+            </div>
+            <div class="locationCard__bottom">
+               <button id="westEnd1ViewMap">
+                  <img src="img/pin-white.svg" alt="">
+                  View Map 
+               </button>
+               <a href="https://thelondonoffice.com" target="_blank">
+                  <img src="img/globe-teal.svg" alt=""> Visit Website
+               </a>
+            </div>
+         </div>
+
+         <!-- london city  -->
+         <div class="locationCard locationCard--city">
+            <div class="locationCard__top locationCard__top--city">
+               <h3 class="locationCard__location">
+                  London</br> (City) Office
+               </h3>
+               <img src="img/pin-teal.svg" alt="" class="locationCard__pin">
+               <p class="locationCard__address">
+                  63-66 Hatton Garden</br> 
+                  London, EC1N 8LE
+               </p>
+               <div class="locationCard__curve">
+                  <img src="img/down-curve.png" alt="" >
+               </div>
+               
+            </div>
+            <div class="locationCard__bottom">
+               <button id="cityViewMap">
+                  <img src="img/pin-white.svg" alt="">
+                  View Map 
+               </button>
+
+               <a href="https://thelondonoffice.com" target="_blank">
+                  <img src="img/globe-teal.svg" alt=""> Visit Website
+               </a>
+            </div>
+         </div>
+
+         <!-- london strand  -->
+         <div class="locationCard locationCard--strand">
+            <div class="locationCard__top locationCard__top--strand">
+               <h3 class="locationCard__location">
+                  London</br> (Strand) Office
+               </h3>
+               <img src="img/pin-teal.svg" alt="" class="locationCard__pin">
+               <p class="locationCard__address">
+                  7 Bell Yard </br>
+                  London, WC2A 2JR
+               </p>
+               <div class="locationCard__curve">
+                  <img src="img/down-curve.png" alt="" >
+               </div>
+               
+            </div>
+            <div class="locationCard__bottom">
+               <button id="strandViewMap">
+                  <img src="img/pin-white.svg" alt="">
+                  View Map 
+               </button>
+
+               <a href="https://thelondonoffice.com" target="_blank">
+                  <img src="img/globe-teal.svg" alt=""> Visit Website
+               </a>
+            </div>
+         </div>
+
+
+      </div>
+      <!-- london locations end  -->
+
+
+      <!-- SCOTLAND LOCATIONS  -->
+      <div class="locationsSection locationsSection--Scotland row90">
+
+         <h2 class="locationsSection__h">
+            Scotland 
+         </h2>
+
+         <p class="locationsSection__p">
+            With its strong and friendly community spirit, Edinburgh has seen a recent boom of startups; with new business owners and entrepreneurs fitting into the community easily and benefiting from the support, inspiration and mentorship of other business founders. <br>
+            We have two impressive offices at notable locations in Edinburgh New Town and Central Edinburgh ideal for creating a great impression.
+         </p>
+
+         <!-- edinburgh 1  -->
+         <div class="locationCard locationCard--edin1">
+            <div class="locationCard__top locationCard__top--edin1">
+               <h3 class="locationCard__location">
+                  Edinburgh</br> (New Town) Office
+               </h3>
+               <img src="img/pin-teal.svg" alt="" class="locationCard__pin">
+               <p class="locationCard__address">
+                  64 Cumberland Street </br> Edinburgh, EH3 6RE
+               </p>
+               <div class="locationCard__curve">
+                  <img src="img/down-curve.png" alt="" >
+               </div>
+               
+            </div>
+            <div class="locationCard__bottom">
+               <button id="edin1ViewMap">
+                  <img src="img/pin-white.svg" alt="">
+                  View Map 
+               </button>
+
+               <a href="https://theedinburghoffice.com" target="_blank">
+                  <img src="img/globe-teal.svg" alt=""> Visit Website
+               </a>
+            </div>
+         </div>
+
+         <!-- edinburgh 2  -->
+         <div class="locationCard locationCard--edin2">
+            <div class="locationCard__top locationCard__top--edin2">
+               <h3 class="locationCard__location">
+                  Edinburgh</br> (Central) Office
+               </h3>
+               <img src="img/pin-teal.svg" alt="" class="locationCard__pin">
+               <p class="locationCard__address">
+                  101 Rose Street South Lane</br> Edinburgh, EH2 3JG
+               </p>
+               <div class="locationCard__curve">
+                  <img src="img/down-curve.png" alt="" >
+               </div>
+               
+            </div>
+            <div class="locationCard__bottom">
+               <button id="edin2ViewMap">
+                  <img src="img/pin-white.svg" alt="">
+                  View Map 
+               </button>
+
+               <a href="https://theedinburghoffice.com" target="_blank">
+                  <img src="img/globe-teal.svg" alt=""> Visit Website
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- scotland locations end  -->
+
+
+      <!-- EAST OF ENGLAND  -->
+      <div class="locationsSection locationsSection--EastOfEngland row90">
+
+         <h2 class="locationsSection__h">
+            East of England
+         </h2>
+
+         <p class="locationsSection__p">
+            Recently named as the best place in the UK to start a new business, Ipswich has a number of initiatives to encourage and support new businesses in the area. With a burgeoning local tech industry and countless digital services springing up in the area, Ipswich is fast-becoming the place to be for creative and cutting-edge businesses. <br>
+            Our Suffolk office is a beautiful Georgian townhouse in the centre of Ipswich – perfect for generating an image of an established local business.
+         </p>
+
+         <!-- ipswich  -->
+         <div class="locationCard locationCard--ipswich">
+            <div class="locationCard__top locationCard__top--ipswich">
+               <h3 class="locationCard__location">
+                  Ipswich</br> (Administration) Office
+               </h3>
+               <img src="img/pin-teal.svg" alt="" class="locationCard__pin">
+               <p class="locationCard__address">
+                  10 Queen Street, Ipswich </br> Suffolk, IP1 1SS
+               </p>
+               <div class="locationCard__curve">
+                  <img src="img/down-curve.png" alt="" >
+               </div>
+               
+            </div>
+            <div class="locationCard__bottom">
+               <button id="ipswichViewMap">
+                  <img src="img/pin-white.svg" alt="">
+                  View Map 
+               </button>
+
+               <a href="https://theipswichoffice.com" target="_blank">
+                  <img src="img/globe-teal.svg" alt=""> Visit Website
+               </a>
+            </div>
+         </div>
+
+      </div>
+      <!-- scotland locations end  -->
+
+   </div>
+   <!-- our locations end  -->
+
+
+
+   <!-- GET IN TOUCH  -->
+   <div class="getInTouchWrapper">
+
+      <div class="getInTouch">
+         <img src="img/triangle.png" alt="" class="getInTouch__triangle"> 
+
+         <div class="getInTouch__col2Wrap">
+            <div class="getInTouch__col2">
+                  <a href="#">
+                     <i class="fas fa-comments"></i>
+                     Live Chat
+                  </a>
+            </div>
+         </div>
+
+         <div class="getInTouch__col1">
+            <p>
+                  Speak to one of our friendly team members
+            </p>
+         </div>
+      </div>
+
+      <div class="getInTouchAfter">
+         <div class="arrow-down"></div>
+      </div>
+
+      <div class="getInTouchContacts row90">
+         <div class="getInTouchContacts__col getInTouchContacts__col--1">
+            <h2 class="getInTouchContacts__h">Sales</h2>
+            <p class="getInTouchContacts__number">020 7183 3787</p>
+            <p class="getInTouchContacts__time" >09:00 – 17:30 | Monday to Friday</p>
+         </div>
+
+         <div class="vl"></div>
+
+         <div class="getInTouchContacts__col getInTouchContacts__col--2">
+            <h2 class="getInTouchContacts__h">Company Formations</h2>
+            <p class="getInTouchContacts__number">020 7183 2653</p>
+            <p class="getInTouchContacts__time" >09:00 – 17:30 | Monday to Friday</p>
+         </div>
+
+         <div class="vl"></div>
+
+         <div class="getInTouchContacts__col getInTouchContacts__col--3">
+            <h2 class="getInTouchContacts__h">Support</h2>
+            <p class="getInTouchContacts__number">020 7183 5369</p>
+            <p class="getInTouchContacts__time" >09:00 – 17:30 | Monday to Friday</p>
+         </div>
+      </div>
+   </div>
+   <!-- get in touch end  -->   
+
+
+
+   <!-- FOOTER  --> 
+   <div class="footerContainer">
+
+      <!-- PARTNERS FOOTER  -->
+      <div class="partnersFooterWrap"> 
+         <div class="partnersFooter row90" >
+            <a href="aboutUs.html">
+               <img src="img/logos/newhmrc-logo.png" alt="">
+            </a>
+
+            <a href="aboutUs.html">
+               <img src="img/logos/ico-logo.png" alt="">
+            </a>
+
+            <a href="aboutUs.html">
+               <img src="img/logos/CompanyHouselogo.png" alt="">
+            </a>
+
+
+            <a href="aboutUs.html">
+               <img src="img/logos/westwin.png" alt="">
+            </a>
+
+            <a href="aboutUs.html">
+               <img src="img/logos/NCA.png" alt="">
+            </a>
+         </div>
+      </div>
+      <!-- partners footer end  -->
+
+      <!-- MAIN FOOTER  -->
+      <div class="mainFooterWrap">
+         <div class="mainFooter row90">
+            <!-- left  -->
+            <div class="mainFooterLeft">
+               <!-- logo  -->
+               <div class="mainFooterLeft__logo">
+                  <a href="index.html">
+                     <img src="img/logo-white.svg" alt="">
+                  </a>
+               </div>
+               <!-- address  -->
+               <div class="mainFooterLeft__address">
+                  <h3>
+                     Our Address:
+                  </h3>
+                  <p>
+                     167-169 Great Portland Street </br>
+                     5th Floor </br>
+                     London </br>
+                     United Kingdom </br>
+                     W1W 5PE
+                  </p>
+               </div>
+               <!-- social links  -->
+               <div class="mainFooterLeft__social">
+                  <!-- twiter  -->
+                  <a href="https://twitter.com/registered_uk" target="_blank">
+                     <i class="fab fa-twitter"></i>
+                  </a>
+                  <!-- facebook  -->
+                  <a href="https://www.facebook.com/MyCompany.Workspace" target="_blank">
+                     <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <!-- linked in  -->
+                  <a href="https://www.linkedin.com/company/registered-office-uk-ltd/" target="_blank">
+                     <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <!-- instagram  -->
+                  <a href="#" target="_blank">
+                     <i class="fab fa-instagram"></i>
+                  </a>
+                  <!-- youtube  -->
+                  <a href="https://www.youtube.com/channel/UCta11jQVd3gugZVu-da8bjQ?view_as=subscriber" target="_blank">
+                     <i class="fab fa-youtube"></i>
+                  </a>
+               </div>
+               <!-- app buttons  -->
+               <div class="mainFooterLeft__apps">
+                  <a href="https://apps.apple.com/us/app/the-london-office/id1240742424?ls=1" target="blank">
+                     <img src="img/AppApple.png" alt="">
+                  </a>
+
+                  <a href="https://play.google.com/store/apps/details?id=com.london.home&hl=en" target="blank">
+                        <img src="img/AppGooogle.png" alt="">
+                  </a>
+               </div>
+            </div>
+
+            <!-- right  -->
+            <div class="mainFooterRight">
+               <div class="mainFooterRight__links">
+                  <h3>
+                     Workspaces
+                  </h3>
+                  <a href="meetingRooms.html">Meeting Rooms</a>
+                  <a href="hotDesk.html">Hot Desks</a>
+                  <a href="businessLounge.html">Business Lounge</a>
+               </div>
+
+               <div class="mainFooterRight__links">
+                  <h3>
+                     Other Services
+                  </h3>
+                  <a href="roa.html">Registered Office Address</a>
+                  <a href="dsa.html">Director Service Address</a>
+                  <a href="vba.html">Virtual Business Address</a>
+                  <a href="vbp.html">Virtual Business Plus</a>
+               </div>
+
+               <div class="mainFooterRight__links">
+                  <h3>
+                     Our Company
+                  </h3>
+                  <a href="ourOffice.html">Our Office</a>
+                  <a href="#">Blog</a>
+                  <a href="locations.html">Locations</a>
+                  <a href="pricing.html">Pricing</a>
+                  <a href="faq.html">FAQs</a>
+                  <a href="app.html">Our App</a>
+               </div>
+
+               <div class="mainFooterRight__wordplay">
+                  <img src="img/WorldPayLogo.png" alt="">
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <!-- main footer end  -->
+
+      <!-- BOTTOM FOOTER  -->
+      <div class="footer2Wrapper">
+         <div class="footer2 row90">
+            <div class="footer2Copy">
+               <p>
+                     &#169; 2020 MYCO Workspace, All Rights Reserved. A division of Registered Office (UK) Ltd | VAT No: GB263877953 | Company No: 09347868
+               </p>
+            </div>
+            <div class="footer2Links">
+               <a href="privacyPolicy.html" class="footer2Links__link" target="_blank">Privacy &#38; Cookies</a>
+               <div class="footer2Links__vl"></div>
+               <a href="termsAndConditions.html" class="footer2Links__link" target="_blank">Terms &#38; Conditions</a>
+               <div class="footer2Links__vl"></div>
+               <a href="siteSecurity.html" class="footer2Links__link" target="_blank">Site Security</a>
+            </div>
+         </div>
+      </div>
+      <!-- bottom footer end  -->   
+
+
+   </div>
+   <!-- footer end  -->
+
+
+
+   <!-- MAP MODALS  -->
+      <!-- London West 1  -->
+      <div class="modalContainer" id="westEnd1Map">
+
+         <div class="modal locationMapModal locationMapModal--westEnd1">
+            <div class="modal__head">
+               <h1>
+                  London (West End) Office
+               </h1>
+               <i class="fas fa-times" id="closeWestEnd1Map"></i>
+            </div>
+   
+            
+            <p class="locationMapModal__p">85 Great Portland Street,<br> London, W1W 7LT </p>
+   
+            <div class="locationMapModal__map">
+               <div class="gmap_canvas">
+                  <iframe width="100%" height="400" id="gmap_canvas"
+                     src="https://maps.google.com/maps?q=W1W%207LT&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                  </iframe>
+                  <a
+                        href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/">
+                  </a>
+               </div>
+            </div>
+   
+         </div>
+   
+      </div>
+
+      <!-- City  -->
+      <div class="modalContainer" id="cityMap">
+
+         <div class="modal locationMapModal locationMapModal--city">
+            <div class="modal__head">
+               <h1>
+                  London (City) Office
+               </h1>
+               <i class="fas fa-times" id="closeCity"></i>
+            </div>
+   
+            
+            <p class="locationMapModal__p">63-66 Hatton Garden,<br> London, EC1N 8LE </p>
+   
+            <div class="locationMapModal__map">
+               <div class="gmap_canvas">
+                  <iframe width="100%" height="400px" id="gmap_canvas"
+                     src="https://maps.google.com/maps?q=EC1N%208LE&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                  </iframe>
+                  <a href="https://www.embedgooglemap.org">google map plugin html</a>
+               </div>
+            </div>
+   
+         </div>
+   
+      </div>
+
+      <!-- Strand  -->
+      <div class="modalContainer" id="strandMap">
+
+         <div class="modal locationMapModal locationMapModal--strand">
+            <div class="modal__head">
+               <h1>
+                  London (Strand) Office
+               </h1>
+               <i class="fas fa-times" id="closeStrand"></i>
+            </div>
+   
+            
+            <p class="locationMapModal__p">7 Bell Yard, </br> London, WC2A 2JR</p>
+   s
+            <div class="locationMapModal__map">
+               <div class="gmap_canvas">
+                  <iframe width="100%" height="400" id="gmap_canvas"
+                     src="https://maps.google.com/maps?q=WC2A%202JR&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                  </iframe>
+                  <a href="https://www.embedgooglemap.org">google map plugin html</a>
+               </div>
+            </div>
+   
+         </div>
+   
+      </div>
+
+      <!-- London West 2--> 
+      <div class="modalContainer" id="westEnd2Map">
+
+         <div class="modal locationMapModal locationMapModal--westEnd">
+            <div class="modal__head">
+               <h1>
+                  London (West End) Office
+               </h1>
+               <i class="fas fa-times" id="closeWestEnd2Map"></i>
+            </div>
+   
+            
+            <p class="locationMapModal__p">167-169 Great Portland Street </br>5th Floor, London, W1W 5PE</p>
+   
+            <div class="locationMapModal__map">
+               <div class="gmap_canvas">
+                  <iframe width="100%" height="400" id="gmap_canvas"
+                     src="https://maps.google.com/maps?q=W1W%207LT&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                  </iframe>
+                  <a
+                        href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/">
+                  </a>
+               </div>
+            </div>
+   
+         </div>
+   
+      </div>
+      
+      <!-- Edinburgh 1  -->
+      <div class="modalContainer" id="edin1Map">
+
+         <div class="modal locationMapModal locationMapModal--edin1">
+            <div class="modal__head">
+               <h1>
+                  Edinburgh (New Town) Office
+               </h1>
+               <i class="fas fa-times " id="closeEdin1"></i>
+            </div>
+   
+            
+            <p class="locationMapModal__p">64 Cumberland Street,</br> Edinburgh, EH3 6RE</p>
+   
+            <div class="locationMapModal__map">
+               <div class="gmap_canvas">
+                  <iframe width="100%" height="400" id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=EH3%206RE&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                  </iframe>
+                  <a href="https://www.embedgooglemap.org">google map plugin html</a>
+               </div>
+            </div>
+   
+         </div>
+   
+      </div>
+
+      <!-- Edinburgh 2  -->
+      <div class="modalContainer" id="edin2Map">
+
+         <div class="modal locationMapModal locationMapModal--edin2">
+            <div class="modal__head">
+               <h1>
+                  Edinburgh (Central) Office
+               </h1>
+               <i class="fas fa-times" id="closeEdin2"></i>
+            </div>
+   
+            
+            <p class="locationMapModal__p">101 Rose Street South Lane,</br> Edinburgh, EH2 3JG</p>
+   
+            <div class="locationMapModal__map">
+               <div class="gmap_canvas">
+                  <iframe width="100%" height="400" id="gmap_canvas"
+                     src="https://maps.google.com/maps?q=EH2%203JG&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                  </iframe>
+                  <a href="https://www.embedgooglemap.org">google map plugin html</a>
+               </div>
+            </div>
+   
+         </div>
+   
+      </div>
+
+
+      <!-- Ipswich  -->
+      <div class="modalContainer closeModal" id="ipswMap">
+
+         <div class="modal locationMapModal locationMapModal--ipsw">
+            <div class="modal__head">
+               <h1>
+                  Ipswich (Administration) Office
+               </h1>
+               <i class="fas fa-times" id="closeIpsw"></i>
+            </div>
+   
+            
+            <p class="locationMapModal__p">10 Queen Street, Ipswich </br> Suffolk IP1 1SS</p>
+   
+            <div class="locationMapModal__map">
+               <div class="gmap_canvas">
+                  <iframe width="100%" height="400" id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=IP1%201SS&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                  </iframe>
+                  <a href="https://www.embedgooglemap.org">google map plugin html</a>
+               </div>
+            </div>
+   
+         </div>
+   
+      </div>
+
+
+</body>

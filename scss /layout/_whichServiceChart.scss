@@ -1,0 +1,410 @@
+.whichServiceChartWrap{
+   background-color: #F2F3F5;
+   padding: 6rem 0 4rem 0;
+   margin-top: 6rem;
+
+   h1{
+      @include H3;
+   }
+}
+
+.whichServiceChart{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-column-gap: 30px;
+   grid-auto-rows: max-content;
+   
+   padding-top: 3rem;
+
+  // background-image: url('../img/chart-background.svg');
+   background-repeat: no-repeat;
+   background-position:center top;
+   background-size: contain;
+}
+
+// which service / box 1 
+.box1{
+   grid-column: 2 / span 4;
+   grid-row: 1 / span 1;
+   justify-self: center;
+
+   width: fit-content;
+   max-width: 100%;
+   padding: 2rem;
+   background-color: $dBlue;
+
+   p{
+      @include Rob-500;
+      color: $white;
+      font-size: 2.2rem;
+      line-height: 160%;
+      text-align: center;
+   }
+}
+
+//arrows styling
+.arrow{
+   background-color: $dBlue;
+   width: 2px;
+   height: 4rem;
+   position: relative;
+
+   &::after{
+      position: absolute;
+      bottom: -1px;
+      right: -5px;
+      content: "";
+      width: 0; 
+      height: 0; 
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      
+      border-top: 8px solid $dBlue;
+   }
+
+   &--2{
+      height: 8rem;
+   }
+
+   &--4{
+      height: 2.3rem;
+   }
+
+   &--5{
+      height: 2.3rem;
+   }
+
+   &--6{
+      height: 2.3rem;
+   }
+}
+
+// box one afer 
+.box1-after{
+   grid-column: 2 / span 4;
+   grid-row: 2 / span 1;
+   justify-self: stretch;
+   padding-bottom: 2px;
+   
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+
+   .arrow--1{
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+      justify-self: start;
+   }
+
+   .arrow--2{
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+      justify-self: center;
+   }
+
+   .arrow--3{
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1;
+      justify-self: end;
+   }
+
+   .horizontal{
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 1;
+      align-self: end;
+      z-index: 2;
+
+      background-color: $dBlue;
+      width: 100%;
+      height: 2px;
+   }
+}
+
+//mail boxes
+.mailBox{
+   display: grid;
+   grid-template-columns: 2rem 1fr 2rem;
+   grid-template-rows: 3rem 3rem;
+
+   padding: 1rem;
+   
+   p{
+      grid-column: 2 /span 1;
+      grid-row: 1 / span 2;
+      align-self: center;
+      z-index: 2;
+
+      @include Rob-400;
+      font-size: 1.8rem;
+      line-height: 120%;
+      text-align: center;
+      color: $white;
+   }
+
+   .tooltip{
+      grid-column: 1 /span 3;
+      grid-row: 1 / span 1;
+
+      text-align: end;
+
+      i{
+         grid-column: 1 / span 3;
+         font-size: 1.9rem;
+         color: $white;
+      }
+
+      .tooltipText{
+         bottom: 4.5rem;
+         left: -10px; 
+
+         background-color: $black;
+         border-bottom-right-radius: 0px !important;
+         padding: 2rem;
+         
+         &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 100%;
+            margin-left: -16px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: $black $black transparent transparent;
+         }
+      }
+   }
+
+   &--1{
+      grid-row: 3 / span 1;
+      grid-column: 1 /span 2;
+      background-color: #4CAF50;
+   }
+
+   &--2{
+      grid-row: 3 / span 1;
+      grid-column: 3 /span 2;
+      background-color: #A161A8;
+   }
+
+   &--3{
+      grid-row: 3 / span 1;
+      grid-column: 5 /span 2;
+      background-color: $teal;
+   }
+}
+
+//position arrows after mail boxes 
+.arrow--4{
+   grid-row: 4 / span 1;
+   grid-column: 2 / span 1;
+   justify-self: start;
+   margin-bottom: 2px;
+}
+
+.arrow--5{
+   grid-row: 4 / span 1;
+   grid-column: 3 / span 2;
+   justify-self: center;
+   margin-bottom: 2px;
+}
+
+.arrow--6{
+   grid-row: 4 / span 1;
+   grid-column: 5 / span 1;
+   justify-self: end;
+   margin-bottom: 2px;
+}
+
+//need to buy box
+.box2{
+   grid-column: 1 / span 6;
+   grid-row: 5 / span 1;
+   justify-self: center;
+
+   width: 80%;
+   max-width: 100%;
+   padding: 2rem;
+   background-color: $dBlue;
+
+   p{
+      @include Rob-500;
+      color: $white;
+      font-size: 2.2rem;
+      line-height: 160%;
+      text-align: center;
+   }
+}
+
+//arrows after need to buy box
+.arrow--7{
+   grid-row: 6 / span 1;
+   grid-column: 2 / span 1;
+   justify-self: start;
+   margin-bottom: 2px;
+}
+
+.arrow--8{
+   grid-row: 6 / span 1;
+   grid-column: 3 / span 2;
+   justify-self: center;
+   margin-bottom: 2px;
+}
+
+.arrow--9{
+   grid-row: 6 / span 1;
+   grid-column: 5 / span 1;
+   justify-self: end;
+   margin-bottom: 2px;
+}
+
+
+//service boxes
+.sBox{
+   @include Flex2;
+   min-height: 8rem;
+   padding: 1rem;
+   text-decoration: none;
+   transition: all 0.5s ease;
+   margin-bottom: 3rem;
+   position: relative;
+
+   p{
+      width: fit-content;
+      text-align: center;
+      @include Rob-400;
+      font-size: 1.7rem;
+      color: $white;
+      line-height: 120%;
+   }
+
+   &--green{
+      background-color: #4CAF50;
+
+      &:hover{
+         background-color: #38813a;
+      }
+   }
+
+   &--purple{
+      background-color: #A161A8;
+
+      &:hover{
+         background-color: #7b3883;
+      }
+   }
+
+   &--blue{
+      background-color: $teal;
+
+      &:hover{
+         background-color: #3787a1;
+      }
+   }
+
+   &--or{
+      &::after{
+         position: absolute;
+         bottom: -18px;
+         content: "Or"; 
+         @include Rob-500;
+         font-size: 1.8rem;
+         color: $dBlue;
+      }
+   }
+
+   &--1{
+      grid-row: 7 / span 1;
+      grid-column: 1 / span 2;
+      justify-self: stretch;
+      align-self: stretch;
+   }
+
+   &--2{
+      grid-row: 8 / span 1;
+      grid-column: 1 / span 2;
+      justify-self: stretch;
+      align-self: stretch;
+   }
+
+   &--3{
+      grid-row: 7 / span 1;
+      grid-column: 3 / span 2;
+      justify-self: stretch;
+      align-self: stretch;
+   }
+   
+   &--4{
+      grid-row: 8 / span 1;
+      grid-column: 3 / span 2;
+      justify-self: stretch;
+      align-self: stretch;
+   }
+
+   &--5{
+      grid-row: 7 / span 1;
+      grid-column: 5 / span 2;
+      justify-self: stretch;
+      align-self: stretch;
+   }
+   
+   &--6{
+      grid-row: 8 / span 1;
+      grid-column: 5 / span 2;
+      justify-self: stretch;
+      align-self: stretch;
+   }
+
+   &--7{
+      grid-row: 9 / span 1;
+      grid-column: 5 / span 2;
+      justify-self: stretch;
+      align-self: stretch;
+   }
+   
+   &--8{
+      grid-row: 10 / span 1;
+      grid-column: 5 / span 2;
+      justify-self: stretch;
+      align-self: stretch;
+   }
+}
+
+@media screen and (max-width: 800px){
+   // which service / box 1 
+   .box1{
+      padding: 1rem;
+
+      p{
+         font-size: 1.8rem;
+      }
+   }
+
+   //mail boxes
+   .mailBox{
+      p{ 
+         font-size: 1.4rem;
+      }
+   }
+
+   // needto buy
+   .box2{
+      padding: 1rem;
+
+      p{
+         font-size: 1.8rem;
+      }
+   }
+
+   //service boxes
+   .sBox{
+      p{
+         font-size: 1.4rem;
+      }
+   }
+}
+
+@media screen and (max-width: 500px){
+   .whichServiceChartWrap{
+      display: none;
+   }
+}

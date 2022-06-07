@@ -1,0 +1,101 @@
+.ourPricesWrap{
+   margin-top: 6rem;
+
+   &__h1{
+      @include H3;
+   }
+
+   .ourPrices{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 1.5rem;
+      justify-items: stretch;
+      align-items: stretch;
+   }
+
+   .ourPricesBox{
+      display: grid;
+      grid-template-columns: 87px 1fr;
+      grid-template-rows: 17px 40px 1fr;
+      justify-items: stretch;
+      align-items: stretch;
+
+      &__number{
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 2;
+         z-index: 2;
+
+         background-color: $teal;
+         position: relative;
+         @include Flex2;
+
+         p{
+            @include Rob-700;
+            font-size: 2.4rem;
+            line-height: 160%;
+            text-align: center;
+            color: $white;
+         }
+
+         &::after{
+            content: "";
+            position: absolute;
+            bottom: -26px;
+            border-right: 87px solid transparent;
+            border-top: 26px solid $teal;
+         }
+      }
+
+      &__text{
+         grid-column: 1 / span 2;
+         grid-row: 2 / span 2;
+
+         background-color: $grey1;
+         padding: 8rem 5rem 6rem 5rem;
+
+         h3{
+            @include Rob-500;
+            text-align: center;
+            font-size: 2.2rem;
+            color: $black;
+            line-height: 160%;
+            margin-bottom: 5rem;
+         }
+
+         p{
+            @include P1;
+            line-height: 200%;
+            text-align: center;
+         }
+      }
+   }
+}
+
+.pricingPriceMatrix{
+   margin-top: 6rem;
+}
+
+.mycoSpace2{
+   margin-top: 6rem;
+   margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 1224px){
+   .ourPricesWrap{
+      .ourPricesBox{
+         &__text{
+            padding: 8rem 2rem 4rem 2rem;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 968px){
+   .ourPricesWrap{
+      .ourPrices{
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr 1fr 1fr;
+         grid-row-gap: 1.5rem;
+      }
+   }
+}

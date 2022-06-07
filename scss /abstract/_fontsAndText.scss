@@ -1,0 +1,153 @@
+//_________FONTS & TEXT_______
+//Getting the fonts from Google Fonts
+// roboto 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300,400;500;700;900&display=swap');
+// rubik 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap');
+//lato
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+//Variables with the fonts
+$font1: 'Roboto', sans-serif;
+$font2: 'Rubik', sans-serif;
+$font3: 'Lato', sans-serif;
+
+//FONTS
+//Roboto 
+@mixin Rob-300{
+    font-family: $font1;
+    font-weight: 300;
+}
+@mixin Rob-400{
+    font-family: $font1;
+    font-weight: 400;
+}
+@mixin Rob-500{
+    font-family: $font1;
+    font-weight: 500;
+}
+@mixin Rob-700{
+    font-family: $font1;
+    font-weight: 700;
+}
+@mixin Rob-900{
+    font-family: $font1;
+    font-weight: 900;
+}
+//Rubik
+@mixin Rub-400{
+    font-family: $font2;
+    font-weight: 400;
+}
+@mixin Rub-500{
+    font-family: $font2;
+    font-weight: 500;
+}
+@mixin Rub-700{
+    font-family: $font2;
+    font-weight: 700;
+}
+@mixin Rub-900{
+    font-family: $font2;
+    font-weight: 900;
+}
+//Lato
+@mixin Lato-400{
+    font-family: $font3;
+    font-weight: 400;
+}
+@mixin Lato-700{
+    font-family: $font3;
+    font-weight: 700;
+}
+
+
+// HEADINGS
+@mixin H1{
+    @include Rub-500;
+    font-size: 3.6rem;
+    line-height: 160%;
+    color: $black ;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 600px){
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+}
+//upercase teal
+@mixin H2{
+    @include Rub-400;
+    font-size: 2rem;
+    line-height: 230%;
+    color: $teal;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 600px){
+        font-size: 1.8rem;
+    }
+}
+//blue with line in centre
+@mixin H3{
+    @include Rub-500;
+    font-size: 2.8rem;
+    color: $black;
+    line-height: 180%;
+    text-align: center;
+    width: fit-content;
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 6rem;
+
+    &:after{
+        content:'';
+        display:block;
+        width:5rem; 
+        height:0;
+        margin: auto;
+        margin-top: 1rem;
+        border-bottom:4px solid $teal;
+    }
+
+    @media screen and (max-width: 600px){
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+//with line on left
+@mixin H4{
+    @include Rub-500;
+    font-size: 2.8rem;
+    color: $black;
+    line-height: 180%;
+    text-align: left;
+    margin-bottom: 6rem;
+
+    &:after{
+        content:'';
+        display:block;
+        width:5rem; 
+        height:0;
+        margin-top: 1rem;
+        border-bottom:4px solid $teal;
+    }
+
+    @media screen and (max-width: 600px){
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+//PARAGRAPHS
+@mixin P1{
+    @include Rob-400;
+    font-size: 1.6rem;
+    line-height: 180%;
+    color: $black;
+
+    @media screen and (max-width: 600px){
+        font-size: 1.4rem;
+    }
+}
+

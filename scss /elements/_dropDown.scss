@@ -1,0 +1,88 @@
+//drop down like main nav workspaces
+.dropDown-btn{
+   position: relative;
+   display: inline-block;
+   cursor: pointer;
+   padding: 3rem 0;
+}
+
+.dropDown{ 
+   z-index: 50;
+
+   position: absolute;
+   left: 50%;
+   top: 7.35rem;
+
+   width: 30rem;
+   margin-left: -15rem;
+   margin-top: 0.2rem;
+   
+   padding: 2rem;
+   list-style: none;
+   background-color: $grey1;
+   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.15);
+
+   li{
+      &:not(:last-child){
+         margin-bottom: 2rem;
+      }
+   }
+} 
+
+//main nav services drop down
+.dropDown-btn-services{
+   display: inline-block;
+   cursor: pointer;
+   padding: 3rem 0;
+}
+
+.servicesDropDown{ 
+   z-index: 50;
+   
+   position: absolute;
+   left: 0;
+   top: 7.6rem;
+   
+   width: 1200px;
+   max-width: 100%;
+
+   padding: 3rem;
+   list-style: none;
+   background-color: $grey1;
+   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.15);
+
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: max-content max-content;
+   grid-column-gap: 6rem;
+   grid-row-gap: 6rem;
+
+   ul{
+      list-style: none;
+   }
+
+   li{
+      @include Rob-500;
+      font-size: 1.8rem;
+      color: $teal;
+
+      &:not(:last-child){
+         margin-bottom: 2rem;
+      }
+   }
+
+}
+
+.openDropDown{
+   display: block;
+   @include slideD-10px;
+}
+
+.openDropDown2{
+   display: grid;
+   @include slideD-10px;
+}
+
+.closeDropDown{
+   display: none;
+}

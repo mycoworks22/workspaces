@@ -1,0 +1,308 @@
+.header2{
+   width: 100%;
+   max-width: 100%;
+   min-width: 100%;
+
+   min-height: 50rem;
+   max-height: fit-content;
+
+   padding: 4rem 0;
+   @include Flex1;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+
+   
+   .header2Content{
+      display: grid;
+      grid-template-columns: 1fr max-content;
+      grid-auto-rows: 1fr;
+      grid-column-gap: 2rem;
+      align-items: center;
+
+      h1{
+         @include Rub-500;
+            color: $white;
+            font-size: 5.5rem;
+            line-height: 130%;
+   
+            border-left: 4px solid $teal;
+            padding: 2rem 0 2rem 2rem;
+      }
+
+      &__price{
+         width: 22rem;
+         height: 22rem;
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+         justify-items: center;
+         align-items: center;
+   
+         img{
+            grid-column: 1 / span 1;
+            grid-row: 1 /span 1;
+
+            display: block;
+            width: 100%;
+            object-fit: cover;
+         }
+
+         p{
+               grid-column: 1 / span 1;
+               grid-row: 1 /span 1;
+               z-index: 3;
+
+               @include Rob-700;
+               font-size: 3rem;
+               line-height: 100%;
+               color: $dBlue;
+               text-align: center;
+
+               span{
+                  display: block;
+                  @include Rob-400;
+                  line-height: 140%;
+                  font-size: 2rem;
+                  color: $teal;
+               }
+               
+         }
+
+         &--cf{
+         
+            p{
+               line-height: 100%;
+               color: $dBlue;
+               text-align: center;
+               margin-bottom: 1rem;
+
+               span{
+                  margin-top: 1rem;
+                  line-height: 105%;
+               }
+               
+         }
+         }
+      }
+
+   }
+   
+
+   &--ourOffice{
+      background-position: center top;
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/ourOffice.png');
+   }
+
+   &--meetingRoom{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/meetingRooms.png');
+   }
+
+   &--ourLocations{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/location.png');
+   }
+
+   &--contactUs{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/contactUs.png');
+   }
+
+   &--pricing{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/pricing.png');
+   }
+
+   &--faq{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/faq.png');
+   }
+
+   &--app{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/app.png');
+   }
+
+   &--hotDesk{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/hotDesk.png');
+   }
+
+   &--businessLounge{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/hotDesk.png');
+   }
+
+   &--officeSpace{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/officeSpace.png');
+   }
+
+   &--desk1{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/desk1.png');
+   }
+
+   &--desk2{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/desk1.png');
+   }
+
+   &--desk3{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/desk1.png');
+   }
+
+   &--desk4{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/desk1.png');
+   }
+
+   &--roa{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--dsa{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--vba{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--vbp{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--vbaTas{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--vbpTas{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--vbpWeb{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--vbpLegal{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--tas{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--companyF{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--about{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+   &--partner{
+      background-image: linear-gradient(0deg, rgba(35, 46, 68, 0.5), rgba(35, 46, 68, 0.5)),
+                        url('../img/headers/roa.png');
+   }
+
+}
+
+@media screen and (max-width: 1200px){
+   .header2{
+      min-height: 30rem !important;
+      max-height: fit-content;
+      .header2Content{
+   
+         h1{
+               font-size: 4rem;
+               padding: 1rem 0 2rem 1rem;
+         }
+   
+         &__price{
+            width: 20rem;
+            height: 20rem;
+      
+            img{
+               width: 100%
+            }
+      
+            p{
+               font-size: 2.5rem;
+      
+               span{
+                  font-size: 1.8rem;
+               }
+                     
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 900px){
+   .header2{
+   
+      .header2Content{
+   
+         h1{
+               font-size: 3rem;
+               padding: 1rem 0 2rem 1rem;
+         }
+   
+         &__price{
+            width: 15rem;
+            height: 15rem;
+      
+            img{
+               width: 100%;
+            }
+      
+            p{
+               font-size: 2rem;
+      
+               span{
+                  font-size: 1.6rem;
+               }
+                     
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 700px){
+   .header2{
+   
+      .header2Content{
+         display: block;
+         h1{
+            width: 100%;
+            border-left: none;
+            text-align: center;
+            padding: 0rem 0 0rem 0rem;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+         }
+   
+         &__price{
+            margin: auto;
+         }
+      }
+   }
+}

@@ -1,0 +1,197 @@
+.getInTouch{
+   background-color: #2C3B58;
+   display: grid;
+   grid-template-columns: 1fr 10rem 1fr;
+   grid-auto-rows: 10rem;
+
+   &__triangle{
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+
+      display: block;
+      height: 100%;
+      width: 100%;
+      transform:translateX(-1px);
+
+   }
+
+   &__col1{
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+
+      background-color: #232E44;
+
+      @include Flex1;
+      justify-content: flex-end;
+      
+
+      p{
+         @include Rob-500;
+         font-size: 2.5rem;
+         color: $white;
+         width: 90%;
+         max-width: 510px;
+      }
+
+   }
+
+   &__col2Wrap{
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+
+      @include Flex1;
+      justify-content: flex-start;
+   }
+   &__col2{
+      width: 90%;
+      max-width: 510px;
+      @include Flex1;
+      justify-content: flex-end;
+
+      a{
+         @include basicBtn2;
+      }
+   }
+
+}
+
+.getInTouchAfter{
+   display: grid;
+   grid-template-columns: 1fr 10rem 1fr;
+   grid-auto-rows: max-content;
+
+   .arrow-down {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      justify-self: end;
+
+      transform:translateY(-1px);
+
+      width: 0; 
+      height: 0; 
+      border-left: 70px solid transparent;
+      border-right: 50px solid transparent;
+      
+      border-top: 50px solid #232E44;;
+   }
+}
+
+.getInTouchContacts{
+   padding: 5rem 0;
+
+   @include Flex1;
+
+   .vl{
+      border-left: 3px solid $teal;
+      height: 8rem;
+   }
+
+   &__h{
+      @include Rob-400;
+      font-size: 2rem;
+      color: $teal;
+
+   }
+
+   &__number{
+      @include Rob-500;
+      font-size: 3rem;
+      color: $teal;
+      line-height: 200%;
+   }
+
+   &__time{
+      @include Lato-400;
+      font-size: 1.8rem;
+      color: $black;
+   }
+}
+
+@media screen and (max-width: 1230px){
+   .getInTouch{
+      background-color: #2C3B58;
+      display: block;
+   
+      &__triangle{
+         display: none;
+      }
+   
+      &__col1{
+         background-color: #232E44;
+         padding: 5rem 0;
+
+         @include Flex1;
+         justify-content: center;
+         
+   
+         p{
+            width: 90%;
+            text-align: center;
+            margin: auto;
+         }
+   
+      }
+   
+      &__col2Wrap{
+         @include Flex1;
+         justify-content: center;
+      }
+
+      &__col2{
+         width: 90%;
+         margin: auto;
+         justify-content: center;
+         padding: 2rem 0;
+   
+         a{
+            margin: 1rem 1rem 1rem 1rem;
+         }
+      }
+   
+   }
+
+   .getInTouchAfter{
+      display: grid;
+      grid-template-columns: 1fr ;
+      grid-auto-rows:max-content;
+   
+      .arrow-down {
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 1;
+         justify-self:center;
+   
+         transform:translateY(-1px);
+   
+         width: 0; 
+         height: 0; 
+         border-left: 40px solid transparent;
+         border-right: 40px solid transparent;
+         
+         border-top: 35px solid #232E44;;
+      }
+   }
+}
+
+@media screen and (max-width: 920px){
+   .getInTouchContacts{
+   
+      display: block;
+   
+      .vl{
+         display: none;
+      }
+   
+      &__col{
+         width: fit-content;
+         margin: auto;
+
+         &--2{
+            margin-top: 5rem;
+         }
+
+         &--3{
+            margin-top: 5rem;
+         }
+      }
+   }
+}

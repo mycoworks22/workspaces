@@ -1,0 +1,92 @@
+.termsWrapper{
+    height: 100vh;
+    max-height: 100vh;
+
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-columns: 1fr;
+
+    .termsHeader{
+        padding: 3rem 0;
+        h1{
+            @include H3;
+            margin: auto;
+        }
+    }
+
+    .terms{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scrollbar-width: 0px;
+
+        &__h{
+            @include Rob-500;
+            font-size: 2.2rem;
+            color: $dBlue;
+            line-height: 160%;
+            padding: 3rem 0 2rem;
+        }
+
+        &__p{
+            @include P1;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+
+            span{
+                @include P1;
+                font-size: 1.8rem;
+                color: $teal;
+            }
+        }
+
+        &__attention{
+            @include H1;
+        }
+
+        &__ul{
+            list-style-type:circle;
+            margin-left: 5rem;
+            margin-bottom: 2rem;
+
+            li{
+                @include P1;
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .termsFooter{
+        @include Flex1;
+        padding: 4rem 0;
+
+        &__date{
+            @include Rob-500;
+            font-size: 1.8rem;
+            color: $dBlue;
+    
+            span{
+                @include Rob-700;
+                font-size: 1.8rem;
+                color: $teal;
+            }
+        }
+    
+        &__download{
+            a{
+                text-decoration: none;
+                @include Rob-700;
+                font-size: 1.8rem;
+                color: $teal;
+                transition: all 0.5s ease;
+    
+                &:hover{
+                    color: $dBlue;
+                }
+            }
+        }
+    }
+
+
+}

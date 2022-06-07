@@ -1,0 +1,209 @@
+// BASIC BTN 1 - teal with white text to dark blue 
+@mixin basicBtn1 {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    @include Rub-500;
+    font-size: 2rem;
+    color: $white;
+    padding: 2rem 6rem;  
+    background-color: $teal;
+    border:none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    @include Flex1;
+
+    i{
+        font-size: 3rem;
+        margin-right: 1rem;
+    }
+
+    &:hover{
+        background-color: $dBlue;
+    }
+
+    @media screen and (max-width: 800px){
+        font-size: 1.8rem;
+        padding: 2rem 2rem;
+
+        i{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// BASIC BTN 2 - teal with white text to white and teal
+@mixin basicBtn2 {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    @include Rub-500;
+    font-size: 2rem;
+    color: $white;
+    padding: 2rem 6rem;  
+    background-color: $teal;
+    border:none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    i{
+        font-size: 3rem;
+        margin-right: 1rem;
+    }
+
+    &:hover{
+        background-color: $white;
+        color: $teal;
+    }
+
+    @media screen and (max-width: 800px){
+        font-size: 1.8rem;
+        padding: 2rem 2rem;
+
+        i{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// BASIC BTN 3 - white with teal text to dark blue 
+@mixin basicBtn3 {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    @include Rub-500;
+    font-size: 2rem;
+    color: $teal;
+    padding: 2rem 6rem;  
+    background-color: $white;
+    border:none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    @include Flex1;
+
+    i{
+        font-size: 3rem;
+        margin-right: 1rem;
+    }
+
+    &:hover{
+        background-color: $dBlue;
+        color: $white;
+    }
+
+    @media screen and (max-width: 800px){
+        font-size: 1.8rem;
+        padding: 2rem 2rem;
+
+        i{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// BASIC BTN 4 - d blue with white 
+@mixin basicBtn4 {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    @include Rub-500;
+    text-align: center;
+    font-size: 2rem;
+    color: $white;
+    padding: 2rem 6rem;  
+    background-color: $dBlue;
+    border:none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    @include Flex1;
+
+    i{
+        font-size: 3rem;
+        margin-right: 1rem;
+    }
+
+
+    @media screen and (max-width: 800px){
+        font-size: 1.8rem;
+        padding: 2rem 2rem;
+
+        i{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// ARROW BTN 1 
+@mixin arrowBtn1 {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    @include Rub-500;
+    font-size: 2rem;
+    color: $white;
+    padding: 2rem 4rem;  
+    background-color: $teal;
+    border:none;
+    cursor: pointer;
+    @include Flex1;
+
+    i{
+        transition: transform 0.5s ease;
+        font-size: 3rem;
+        margin-left: 2rem;
+    }
+
+    &:hover{
+        i{
+            transform: translateX(15px);
+        }
+    }
+
+    @media screen and (max-width: 800px){
+        font-size: 1.8rem;
+        padding: 2rem 2rem;
+
+        i{
+            font-size: 2rem;
+        }
+
+        &:hover{
+            i{
+                transform: translateX(10px);
+            }
+        }
+    }
+}
+
+// round btn - teal with white text to dark blue 
+@mixin roundBtn1 {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    @include Rob-500;
+    font-size: 1.6rem;
+    color: $white;
+    padding: 1rem 2rem;  
+    background-color: $teal;
+    border: 1px solid $teal;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $dBlue;
+        border: 1px solid $dBlue;
+    }
+}
+
+//basic link
+@mixin basicLink1 {
+    text-decoration: none;
+    @include P1;
+    color: $teal;
+    
+    &:hover{
+        color: $dBlue;
+    }
+
+}

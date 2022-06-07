@@ -1,0 +1,305 @@
+.partnersFooterWrap{
+   background-color: #232E44;
+   padding: 2rem 0; 
+
+   .partnersFooter{
+      display: grid;
+      grid-template-columns: max-content max-content max-content max-content max-content;
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      justify-content: space-between; 
+      a{  
+         width: fit-content;
+         text-decoration: none;
+
+         img{
+            height: 3.5rem;
+         }
+      }
+      
+   }
+}
+
+.mainFooterWrap{
+   background-color: #2C3B58;
+   padding: 4rem 0;
+
+   .mainFooter{
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      grid-column-gap: 5rem;
+
+      .mainFooterLeft{
+         &__logo{
+            img{
+               display: block;
+               width: 25rem;
+               margin-bottom: 4rem;
+            }
+         }
+
+         &__address{
+            display: block;
+            margin-bottom: 3rem;
+
+            h3{
+               @include Lato-700;
+               font-size: 1.6rem;
+               color: $white;
+               line-height: 180%;
+            }
+            p{
+               @include Lato-400;
+               font-size: 1.6rem;
+               color: $white;
+               line-height: 180%;
+            }
+         }
+
+         &__social{
+            @include Flex1;
+            max-width: 15rem;
+            margin-bottom: 4rem;
+
+            a{
+               i{
+                  font-size: 1.5rem;
+                  color: $white;
+                  transition: all 0.5s ease;
+               }
+
+               &:hover{
+                  i{
+                     color: $teal;
+                  }
+               }
+            }
+         }
+
+         &__apps{
+            @include Flex1;
+
+            a{
+               img{
+                  display: block;
+                  height: 50px;
+               }
+
+               &:not(:last-child){
+                  margin-right: 1.5rem;
+               }
+            }
+
+         }
+      }
+
+      .mainFooterRight{
+         display: grid;
+         grid-template-columns: max-content max-content max-content;
+         grid-template-rows: max-content max-content max-content;
+         grid-row-gap: 5rem;
+         grid-column-gap: 5rem;
+         justify-content: space-between;  
+
+         &__links{ 
+
+            h3{
+               color: $white;
+               @include Lato-700;
+               font-size: 1.6rem;
+               margin-bottom: 2.3rem;
+            }
+
+            a{
+               display: block;
+               text-decoration: none;
+               color: $white;
+               @include Lato-400;
+               font-size: 1.6rem;
+               transition: all 0.5s ease;
+
+               &:not(:last-child){
+                  margin-bottom: 2rem;
+               }
+
+               &:hover{
+                  color: $teal;
+               }
+            }
+
+            &--1{
+               grid-column: 1 / span 1;
+               grid-row: 1 / span 1;
+            }
+
+            &--2{
+               grid-column: 1 / span 1;
+               grid-row: 2 / span 1;
+            }
+
+            &--3{
+               grid-column: 2 / span 1;
+               grid-row: 1 / span 1;
+            }
+
+            &--4{
+               grid-column: 2 / span 1;
+               grid-row: 2 / span 1;
+            }
+
+            &--5{
+               grid-column: 3 / span 1;
+               grid-row: 1 / span 2;
+            }
+         }
+
+         &__wordplay{
+            grid-column: 1 / span 3;
+            grid-auto-rows: 3 / span 1;
+            width: 100%;
+
+            img{
+               display: block;
+               width: 25rem;
+               margin-left: auto;
+            }
+         }
+      }
+   }
+}
+
+.footer2Wrapper{
+   padding: 1rem 0;
+   background-color: #232E44;
+
+   .footer2{
+      @include Flex1;
+      padding: 1rem;
+
+      .footer2Copy{
+         margin-right: 0.8rem;
+
+         p{
+            @include Lato-400;
+            font-size: 13px;
+            color: $white;
+            line-height: 160%;
+         }
+      }
+
+      .footer2Links{
+         @include Flex1;
+         &__link{ 
+               text-decoration: none;
+               @include Lato-400;
+               font-size: 13px;
+               color: $white;
+         
+               transition: all 0.5s ease;
+         
+               &:hover{
+                  color: $teal;
+               }
+              
+         }
+
+         &__vl{
+            margin: 1rem 0.8rem;
+            border-left: 1px solid $white;
+            height: 2.1rem;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1300px){
+   .mainFooterWrap{
+      .mainFooter{
+         display: block;
+
+         .mainFooterLeft{
+            margin-bottom: 3rem;
+
+            &__apps{
+               justify-content: flex-start;
+
+               a{
+                  margin-bottom: 1rem;
+               }
+            }
+         }
+
+         .mainFooterRight{
+            max-width: 100%;
+            justify-content: space-between;
+
+            &__wordplay{
+               img{
+                  margin-left: 0;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1069px){
+   .partnersFooterWrap{
+      .partnersFooter{
+         a{  
+            img{
+               height: 3rem;
+            }
+         }
+         
+      }
+   }
+}
+
+
+@media screen and (max-width: 900px){
+   .mainFooterWrap{
+      .mainFooter{
+
+         .mainFooterRight{
+            
+            &__links{
+               width: 49%;
+               margin-left: 0 !important;
+               margin-bottom: 5rem;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 650px){
+   .partnersFooterWrap{
+      .partnersFooter{
+         grid-template-columns: max-content max-content max-content;
+      }
+   }
+}
+
+@media screen and (max-width: 500px){
+   .mainFooterWrap{
+      .mainFooter{
+
+         .mainFooterRight{
+            
+            &__links{
+               width: 100%;
+               text-align: justify;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 400px){
+   .partnersFooterWrap{
+      .partnersFooter{
+         grid-template-columns: max-content max-content;
+      }
+   }
+} 

@@ -1,0 +1,318 @@
+.mainNavWrap{
+   width: 100%;
+   padding: 0 0;
+   background-color: $white;
+
+   
+
+   .mainNav{
+      position: relative;
+      @include Flex1;
+   
+      &__right{
+         @include Flex1;
+      }
+
+      //logo
+      .mainNavLogo{
+         a{
+            display: block;
+
+            img{
+               display: block;
+               width: 28rem;
+            }
+         }
+      }
+
+      .navLinks{
+         @include Flex1;
+         list-style: none;
+
+         &__link{
+               a{
+                  display: block;
+                  text-decoration: none;
+                  @include Rob-400;
+                  font-size: 1.6rem;
+                  color: $dBlue;
+                  transition: all 0.5s ease;
+
+                  &:hover{
+                     color: $teal;
+                  }
+               }
+
+               &:not(:last-child){
+                  margin-right: 2rem;
+               }
+
+               .activeLink{
+                  color: $teal;
+               }
+         }
+      }
+
+      //log in btn
+      .navLogIn{
+         button{
+            @include basicBtn1;
+            padding: 1.5rem 2rem;
+            font-size: 1.7rem;
+            margin: 0 3rem;
+         }
+      }
+
+      //burger
+      .navBurger{
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+         cursor: pointer;
+
+         .burgerLine{
+            height: 4px;
+            background-color: $teal;
+            border-radius: 6px;
+            transition: all 0.4s linear;
+
+            &--1{
+               width: 24px;
+            }
+
+            &--2{
+               width: 18px;
+               margin: 6px 0;
+            }
+
+            &--3{
+               width: 14px;
+            }
+         }
+
+         &:hover{
+            .burgerLine{
+               background-color: $dBlue;
+
+               &--1{
+                  width: 24px;
+               }
+
+               &--2{
+                  width: 24px;
+               }
+
+               &--3{
+                  width: 24px;
+               }
+            }
+         }
+      }
+
+      // burger menu
+      .burgerMenu{
+         position: fixed !important;
+         top: 0;
+         left: 0;
+
+         z-index: 500 !important;
+
+         width: 100vw !important;
+
+         height: 100vh !important;
+         height: 100vh;
+
+         background-color: $grey1;
+         padding: 3rem 0;
+
+         overflow: scroll;
+         
+         transform: translateX(100%);
+         transition: transform 0.8s linear;
+         
+   
+         &__top{
+            @include Flex1;
+            margin-bottom: 10rem;
+
+            img{
+               width: 20rem;
+            }
+
+            i{
+               font-size: 2rem;
+               color: $dBlue;
+               transition: all 0.5s ease;
+               cursor: pointer;
+
+               &:hover{
+                  color: $teal;
+               }
+            }
+         }
+
+         &__nav{
+            @include Flex2;
+            
+         
+            ul{
+               width: fit-content;
+               list-style: none;
+
+               .burgerLink{
+                  text-align: center;
+
+                  a{
+                     display: block;
+                     text-decoration: none;
+                     @include Rob-700;
+                     font-size: 2.2rem;
+                     color: $dBlue;
+                     transition: all 0.5s ease;
+   
+                     &:hover{
+                        color: $teal;
+                     }
+                  }
+   
+                  &:not(:last-child){
+                     margin-bottom: 3rem;
+                  }
+
+                  &--hidden{
+                     display: none;
+                  }
+
+                  &--active{
+                     a{
+                        color: $teal;
+                     }
+                  }
+               }
+
+            }
+         }
+
+         .burgerDropDown{
+            display: none;
+            margin-top: 1rem;
+            width: 100%;
+            
+            li{
+               text-align: center;
+
+               a{
+                  display: block;
+                  text-decoration: none;
+                  @include Rob-400;
+                  font-size: 2rem;
+                  color: $dBlue;
+                  transition: all 0.5s ease;
+
+                  &:hover{
+                     color: $teal;
+                  }
+               }
+
+               &:not(:last-child){
+                  margin-bottom: 3rem;
+               }
+
+               &--hidden{
+                  display: none;
+               }
+
+               &--active{
+                  a{
+                     color: $teal;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+}
+
+@media screen and (max-width: 1450px){
+   .mainNavWrap{
+      .mainNav{
+         //logo
+         .mainNavLogo{
+            a{
+               display: block;
+
+               img{
+                  display: block;
+                  width: 20rem;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1250px){
+   .mainNavWrap{
+      padding: 2rem 0;
+      .mainNav{
+         .navLinks{
+            display: none;
+         }
+      }
+
+      .burgerMenu{
+         &__nav{
+
+            ul{
+               .burgerLink{
+                  &--hidden{
+                     display: block !important;
+                  }
+               }
+            }
+            
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 450px){
+   .mainNavWrap{
+      padding: 1.5rem 0;
+
+      .mainNav{
+
+         .mainNavLogo{
+            width: 100%;
+            margin-bottom: 2rem;
+            a{
+               img{
+                  margin: 0 auto;
+               }
+            }
+         }
+
+         &__right{
+            width: 100%;
+         }
+
+         .navLogIn{
+            button{
+               @include basicBtn1;
+               padding: 1rem 1rem;
+               font-size: 1.7rem;
+               margin: 0 3rem 0 0;
+            }
+         }
+
+         .burgerMenu{
+            &__top{
+               margin-bottom: 3rem;
+            }
+         }
+      }
+
+      
+   }
+}

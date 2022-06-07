@@ -1,0 +1,472 @@
+.partnersInfoWrap{
+   padding: 6rem 0 0 0;
+
+   .partnersInfo{
+      h1{
+         @include H4;
+      }
+
+      p{
+         @include Rob-400;
+         font-size: 1.6rem;
+         line-height: 160%;
+         color: $black;
+         
+         &:not(:last-child){
+            margin-bottom: 3rem;
+         }
+      }
+   }
+}
+
+
+.partnersTypesWrap{
+   padding: 6rem 0;
+
+   .partnersTypes{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: max-content;
+      grid-column-gap: 2rem;
+      
+   }
+
+   .partnersBox{
+      overflow: hidden;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      &--bronze{ 
+         background-image:   linear-gradient(0deg, rgba(44, 59, 88, 0.8), rgba(44, 59, 88, 0.8)),
+                              url('../img/bronze1.png');
+      }
+
+      &--silver{ 
+         background-image:   linear-gradient(0deg, rgba(44, 59, 88, 0.8), rgba(44, 59, 88, 0.8)),
+                              url('../img/silver1.png');
+      }
+
+      &--gold{ 
+         background-image:   linear-gradient(0deg, rgba(44, 59, 88, 0.8), rgba(44, 59, 88, 0.8)),
+                              url('../img/gold1.png');
+      }
+
+      &--platinum{ 
+         background-image:   linear-gradient(0deg, rgba(44, 59, 88, 0.8), rgba(44, 59, 88, 0.8)),
+                              url('../img/platinum1.png');
+      }
+
+      &__head{
+         padding: 4rem 1rem 0 2rem;
+
+         h2{
+            @include Rob-500;
+            font-size: 2.8rem;
+            color: $white;
+         }
+
+         &--bronze{
+            background-color: #A4684F;
+         }
+
+         &--silver{
+            background-color: #A5A9AC;
+         }
+
+         &--gold{
+            background-color: #E7BE18;
+         }
+
+         &--platinum{
+            background-color: #5D5D5D;
+         }
+         
+      }
+
+      &__triangle{
+         img{
+            width: 140%; 
+            height: auto;
+            transform: translateX(-20%);
+            transform: translateY(-3px);
+         }
+      }
+
+      &__content{
+         padding: 3rem 1rem 8rem;
+
+         .partners-required{
+            @include Rob-300;
+            font-size: 1.8rem;
+            line-height: 160.19%;
+            text-align: center;
+            color: $white;
+         }
+
+         .partners-discount{
+            @include Rob-500;
+            font-size: 2.2rem;
+            line-height: 160.19%;
+            text-align: center;
+            color: $white;
+         }
+      }
+      
+   }
+}
+
+
+.partnersQuoteWrap{
+   padding: 5rem 0;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-image:   linear-gradient(0deg, rgba(44, 59, 88, 0.95), rgba(44, 59, 88, 0.95)),
+                        url('../img/partners2.png');
+
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-column-gap: 5rem;
+   grid-template-rows: max-content 2rem;
+   grid-row-gap: 2rem;
+
+   .partnersQuoteInner{
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+      justify-self: center;
+
+      width: 90%;
+      max-width: 1200px;
+      overflow: hidden;
+
+      .partnersQuoteContainer{
+         width: 100% !important;
+         min-width: 100% !important;
+         max-width: 100% !important;
+         display: flex;
+
+         .partnersQuote{
+            padding: 0 1rem;
+            width: 100% !important;
+            min-width: 100% !important;
+            max-width: 100% !important;
+
+            &__img{
+               width: 4rem;
+            }
+      
+            &__quote{
+               padding: 0rem 2rem;
+               @include Rob-300;
+               font-style: italic;
+               font-size: 28px;
+               line-height: 180.19%;
+               text-align: center;
+               color: $white;
+            }
+      
+            &__author{
+               @include Rob-300;
+               font-size: 2rem;
+               line-height: 180.19%;
+               text-align: center;
+               font-style: italic;
+               color: $white;
+               padding-top: 4rem;
+               
+               span{
+                  @include Rob-300;
+                  font-size: 2rem;
+                  line-height: 180.19%;
+                  color: $white;
+               }
+
+            }
+         }
+      }
+
+   }
+   
+   &__btn{
+      i{
+         font-size: 2rem;
+         color: $white;
+         cursor: pointer;
+      }
+
+      &--prev{
+         grid-column: 1 / span 1;
+         grid-row: 2 / span 1;
+         justify-self: end;
+      }
+
+      &--next{
+         grid-column: 2 / span 1;
+         grid-row: 2 / span 1;
+         justify-self: start;
+      }
+   }
+}
+
+
+.partnersFeaturesWrap{
+   padding: 6rem 0;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-image:   linear-gradient(0deg, rgba(242, 246, 251, 0.94), rgba(242, 246, 251, 0.94)),
+                        url('../img/call.png');
+
+   .partnersFeatures{
+      max-width: 1000px;
+      @include Flex1;
+      align-items: flex-start;
+   }
+
+   .partnersFeaturesCol{
+      h2{
+         @include H4;
+      }
+
+      ul{
+         list-style: none;
+      }
+
+      li{
+         max-width: 40rem;
+         display: grid;
+         grid-template-columns: max-content 1fr;
+         align-items: center;
+
+         @include Rob-400;
+         font-size: 1.6rem;
+         color: $black;
+         line-height: 160%;
+
+         img{
+            width: 3rem;
+            margin-right: 2rem;
+         }
+
+         &:not(:last-child){
+            margin-bottom: 3rem;
+         }
+      }
+   }
+}
+
+
+.partnersContactWrap{
+   padding: 6rem 0;
+   background-color: white;
+
+   &__h1{
+      @include Rob-400;
+      font-size: 2.6rem;
+      line-height: 140%;
+      color: $dBlue;
+      text-align: center;
+
+      width: fit-content;
+      max-width: 90%;
+      margin: auto;
+      margin-bottom: 3rem;
+   } 
+
+   &__h2{
+      @include P1;
+      text-align: center;
+
+      width: 70rem;
+      max-width: 90%;
+      margin: auto;
+      margin-bottom: 3rem;
+   }
+
+   .partnersContact{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: max-content max-content max-content max-content max-content;
+      grid-column-gap: 2rem; 
+      grid-row-gap: 2rem;
+
+      max-width: 70rem;
+      margin: auto;
+
+      &__name{
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 1;
+      }
+
+      &__email{
+         grid-column: 1 / span 1;
+         grid-row: 2 / span 1;
+      }
+
+      &__company{
+         grid-column: 2 / span 1;
+         grid-row: 1 / span 1;
+      }
+
+      &__phone{
+         grid-column: 2 / span 1;
+         grid-row: 2 / span 1;
+      }
+
+      &__message{
+         grid-column: 1 / span 2;
+         grid-row: 3 / span 1;
+      }
+
+      &__capcha{
+         grid-column: 1 / span 2;
+         grid-row: 4 / span 1;
+         justify-self: end;
+      }
+
+      &__submit{
+         grid-column: 1 / span 2;
+         grid-row: 5 / span 1;
+         justify-self: end;
+         padding: 1.5rem 4rem !important;
+      }
+   }
+}
+
+
+
+@media screen and (max-width: 900px){
+   .partnersTypesWrap{
+      padding: 6rem 0;
+   
+      .partnersTypes{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: max-content max-content;
+         grid-column-gap: 2rem;
+         grid-row-gap: 2rem;
+         
+      }
+   }
+
+   .partnersFeaturesWrap{
+      
+      .partnersFeatures{
+         max-width: 1000px;
+         @include Flex1;
+         flex-direction: column;
+      }
+
+      .partnersFeaturesCol{
+         &--2{
+            margin-top: 6rem;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 800px){
+   .partnersQuoteWrap{
+      .partnersQuoteInner{
+         .partnersQuoteContainer{
+            .partnersQuote{
+               &__img{
+                  width: 2rem;
+               }
+
+               &__quote{
+                  padding: 0rem 1rem;
+                  font-size: 1.8rem;
+               }
+
+               &__author{
+                  font-size: 1.6rem;
+                  padding-top: 1.5rem;
+                  
+                  span{
+                     font-size: 1.6rem;
+                  }
+               }
+            }
+         }
+      }
+      
+      &__btn{
+         i{
+            font-size: 2rem;
+            color: $white;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 600px){
+   .partnersTypesWrap{
+      padding: 6rem 0;
+   
+      .partnersTypes{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: max-content max-content max-content max-content;
+         grid-column-gap: 2rem;
+         grid-row-gap: 2rem;
+         
+      }
+   }
+}
+
+@media screen and (max-width: 500px){
+   .partnersContactWrap{
+      
+      .partnersContact{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: max-content max-content max-content max-content max-content max-content max-content;
+         grid-column-gap: 2rem; 
+   
+         max-width: 70rem;
+         margin: auto;
+   
+         &__name{
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+         }
+   
+         &__email{
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+         }
+   
+         &__company{
+            grid-column: 1 / span 1;
+            grid-row: 3 / span 1;
+         }
+   
+         &__phone{
+            grid-column: 1 / span 1;
+            grid-row: 4 / span 1;
+         }
+   
+         &__message{
+            grid-column: 1 / span 1;
+            grid-row: 5 / span 1;
+         }
+
+         &__capcha{
+            grid-column: 1 / span 1;
+            grid-row: 6 / span 1;
+            justify-self: end;
+         }
+   
+         &__submit{
+            grid-column: 1 / span 1;
+            grid-row: 7 / span 1;
+            justify-self: end;
+            padding: 1.5rem 4rem !important;
+         }
+      }
+   }
+}

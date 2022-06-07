@@ -1,0 +1,9 @@
+.meetingRoomsWrap{
+   width: 100%;
+   margin-bottom: 6rem;
+
+   h1{
+      @include H3;
+      width: 65rem; 
+   }
+}
